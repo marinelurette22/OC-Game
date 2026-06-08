@@ -53,15 +53,13 @@ export default function Bravo() {
         display: 'flex', flexDirection: 'column', alignItems: 'center',
         textAlign: 'center', padding: '20px 0',
       }}>
-        <div style={{ fontSize: 56, marginBottom: 12, lineHeight: 1 }}>🎉</div>
-
         <h1 style={{ fontSize: 28, fontWeight: 900, color: '#111', marginBottom: 6, letterSpacing: 2 }}>
           BRAVO !
         </h1>
         <div style={{ width: 50, height: 4, background: RED, borderRadius: 2, marginBottom: 16 }} />
 
         <p style={{ fontSize: 15, color: '#555', lineHeight: 1.7, marginBottom: 28, maxWidth: 300 }}>
-          Tu as relevé le défi OC'nigme ! Tente ta chance pour remporter ton cadeau 🎁
+          Tu as relevé le défi OC'nigme ! Tente ta chance pour remporter ton cadeau.
         </p>
 
         {/* Roue */}
@@ -99,7 +97,7 @@ export default function Bravo() {
             marginBottom: 24,
             transition: 'all 0.2s',
           }}>
-            {mustSpin ? 'La roue tourne…' : '🎰 Tenter ma chance !'}
+            {mustSpin ? 'La roue tourne…' : 'Tenter ma chance !'}
           </button>
         )}
 
@@ -114,7 +112,7 @@ export default function Bravo() {
             marginBottom: 20,
           }}>
             <p style={{ fontSize: 13, color: RED, fontWeight: 700, letterSpacing: 2, marginBottom: 10, textTransform: 'uppercase' }}>
-              🎁 Tu as gagné !
+              Tu as gagné !
             </p>
             <p style={{ fontSize: 24, fontWeight: 900, color: '#111', marginBottom: 16 }}>
               {cadeau}
@@ -123,7 +121,7 @@ export default function Bravo() {
               background: '#fff', borderRadius: 12, padding: '14px',
             }}>
               <p style={{ fontSize: 14, color: '#888', lineHeight: 1.6 }}>
-                Montre cet écran à ton opticien pour récupérer ton cadeau 😊
+                Montre cet écran à ton opticien pour récupérer ton cadeau.
               </p>
               <p style={{ fontSize: 9, color: '#bbb', marginTop: 8 }}>
                 * Dans la limite des stocks disponibles
