@@ -33,11 +33,8 @@ export default function Landing({ onStart }) {
           Prêt pour le défi ?
         </p>
         <h1 style={{ fontSize: 22, fontWeight: 900, color: '#111', lineHeight: 1.3, marginBottom: 12 }}>
-          Amateur de défis ?
+          6 énigmes t'attendent
         </h1>
-        <p style={{ fontSize: 16, color: '#555', lineHeight: 1.6, marginBottom: 20 }}>
-          Oseras-tu relever le nôtre ?
-        </p>
         <div style={{
           width: '100%',
           height: 2,
@@ -45,7 +42,7 @@ export default function Landing({ onStart }) {
           marginBottom: 20,
         }} />
         <p style={{ fontSize: 14, color: '#666', lineHeight: 1.6 }}>
-          6 énigmes autour de l'optique t'attendent. Sauras-tu toutes les résoudre ?
+          Résous-les toutes et tente de remporter un cadeau !
         </p>
       </div>
 
