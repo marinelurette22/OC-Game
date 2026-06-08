@@ -2,29 +2,35 @@ import { useState } from 'react'
 import Layout from './Layout'
 
 const RED = '#C8102E'
-const BONNES_REPONSES = ['HEY META', 'HEY META!', 'HEY META !']
+const BONNE_REPONSE = 'heymeta'
 
 const SPECS = [
-  { emoji: '📹', titre: 'Caméra intégrée', desc: '12 MP · vidéo 1080p · ultra-large' },
-  { emoji: '🎵', titre: 'Haut-parleurs open-ear', desc: 'Son spatial sans boucher les oreilles' },
-  { emoji: '📞', titre: 'Appels mains-libres', desc: 'Micro intégré · qualité cristalline' },
-  { emoji: '🤖', titre: 'IA intégrée', desc: 'Assistant Meta IA activé par commande vocale' },
-  { emoji: '🔋', titre: 'Autonomie', desc: '4h en continu · étui de rechargement inclus' },
-  { emoji: '🌊', titre: 'Résistance', desc: 'Résistant aux éclaboussures (IPX4)' },
+  { titre: 'Caméra intégrée', desc: '12 MP · vidéo 1080p' },
+  { titre: 'Haut-parleurs', desc: 'Son open-ear spatial' },
+  { titre: 'Appels mains-libres', desc: 'Micro intégré' },
+  { titre: 'IA intégrée', desc: 'Commande vocale' },
+  { titre: 'Autonomie', desc: '4h · étui de recharge' },
+  { titre: 'Résistance', desc: 'Éclaboussures IPX4' },
+]
+
+const CHOIX = [
+  { id: 'heymeta', label: 'Hey Meta' },
+  { id: 'okgoogle', label: 'Ok Google' },
+  { id: 'dissiri', label: 'Dis Siri' },
+  { id: 'alexa', label: 'Alexa' },
 ]
 
 export default function Etape4({ onSuivant }) {
-  const [reponse, setReponse] = useState('')
+  const [selection, setSelection] = useState(null)
   const [erreur, setErreur] = useState(false)
-  const [shake, setShake] = useState(false)
 
   const valider = () => {
-    if (BONNES_REPONSES.includes(reponse.trim().toUpperCase())) {
+    if (!selection) return
+    if (selection === BONNE_REPONSE) {
       onSuivant()
     } else {
       setErreur(true)
-      setShake(true)
-      setTimeout(() => setShake(false), 500)
+      setTimeout(() => setErreur(false), 2000)
     }
   }
 
@@ -53,21 +59,15 @@ export default function Etape4({ onSuivant }) {
         </p>
       </div>
 
-      {/* Specs */}
-      <div style={{
-        background: '#f5f5f5', border: '1px solid #e0e0e0', borderRadius: 16,
-        overflow: 'hidden', marginBottom: 24,
-      }}>
+      {/* Specs en mini-cartes */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 24 }}>
         {SPECS.map((s, i) => (
           <div key={i} style={{
-            display: 'flex', gap: 14, padding: '14px 18px',
-            borderBottom: i < SPECS.length - 1 ? '1px solid #e0e0e0' : 'none',
-            alignItems: 'flex-start',
+            background: '#f5f5f5', border: '1px solid #e0e0e0', borderRadius: 12,
+            padding: '12px', textAlign: 'center',
           }}>
-            <div>
-              <div style={{ fontSize: 14, fontWeight: 700, color: '#111', marginBottom: 2 }}>{s.titre}</div>
-              <div style={{ fontSize: 13, color: '#666' }}>{s.desc}</div>
-            </div>
+            <div style={{ fontSize: 13, fontWeight: 700, color: '#111', marginBottom: 4 }}>{s.titre}</div>
+            <div style={{ fontSize: 11, color: '#888', lineHeight: 1.4 }}>{s.desc}</div>
           </div>
         ))}
       </div>
@@ -75,66 +75,58 @@ export default function Etape4({ onSuivant }) {
       {/* Question */}
       <div style={{
         background: '#f5f5f5', border: `1px solid ${RED}44`, borderRadius: 16,
-        padding: '18px', marginBottom: 20,
+        padding: '18px', marginBottom: 16,
       }}>
         <p style={{ fontSize: 13, color: '#888', marginBottom: 8, letterSpacing: 2, textTransform: 'uppercase' }}>Mission 4</p>
         <p style={{ fontSize: 15, color: '#111', fontWeight: 700, lineHeight: 1.6 }}>
-          L'IA de ces lunettes s'active par commande vocale. Quelle est la phrase exacte pour la réveiller ?
+          L'IA de ces lunettes s'active par commande vocale. Laquelle ?
         </p>
       </div>
 
-      {/* Input */}
-      <div style={{ marginBottom: 16 }}>
-        <input
-          type="text"
-          value={reponse}
-          onChange={e => { setReponse(e.target.value); setErreur(false) }}
-          onKeyDown={e => e.key === 'Enter' && valider()}
-          placeholder="Votre commande vocale…"
-          style={{
-            width: '100%',
-            padding: '16px',
-            background: '#fff',
-            border: `2px solid ${erreur ? RED : '#ddd'}`,
-            borderRadius: 12,
-            color: '#111',
-            fontSize: 17,
-            fontWeight: 700,
-            outline: 'none',
-            animation: shake ? 'shake 0.4s ease' : 'none',
-          }}
-        />
-        {erreur && (
-          <p style={{ color: RED, fontSize: 13, marginTop: 8, fontWeight: 600 }}>
-            ❌ Ce n'est pas ça… L'IA attend une phrase précise !
-          </p>
-        )}
+      {/* Choix */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 16 }}>
+        {CHOIX.map(c => (
+          <button
+            key={c.id}
+            onClick={() => { setSelection(c.id); setErreur(false) }}
+            style={{
+              padding: '16px 12px',
+              background: selection === c.id ? '#111' : '#f5f5f5',
+              border: `2px solid ${selection === c.id ? '#111' : '#ddd'}`,
+              borderRadius: 12,
+              color: selection === c.id ? '#fff' : '#333',
+              fontSize: 15,
+              fontWeight: 700,
+              textAlign: 'center',
+              transition: 'all 0.15s',
+            }}
+          >
+            {c.label}
+          </button>
+        ))}
       </div>
 
-      <button onClick={valider} style={{
+      {erreur && (
+        <p style={{ color: RED, fontSize: 13, marginBottom: 12, fontWeight: 600, textAlign: 'center' }}>
+          Ce n'est pas ça… L'IA attend une phrase précise !
+        </p>
+      )}
+
+      <button onClick={valider} disabled={!selection} style={{
         width: '100%',
         padding: '16px',
-        background: RED,
-        color: '#fff',
+        background: selection ? RED : '#ddd',
+        color: selection ? '#fff' : '#999',
         border: 'none',
         borderRadius: 12,
         fontSize: 16,
         fontWeight: 800,
         letterSpacing: 1,
         textTransform: 'uppercase',
+        transition: 'all 0.2s',
       }}>
         Valider →
       </button>
-
-      <style>{`
-        @keyframes shake {
-          0%, 100% { transform: translateX(0); }
-          20% { transform: translateX(-8px); }
-          40% { transform: translateX(8px); }
-          60% { transform: translateX(-8px); }
-          80% { transform: translateX(8px); }
-        }
-      `}</style>
     </Layout>
   )
 }
