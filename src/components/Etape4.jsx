@@ -42,14 +42,14 @@ export default function Etape4({ onSuivant }) {
 
       {/* Titre */}
       <div style={{
-        background: '#f5f5f5', border: `1px solid ${RED}44`, borderRadius: 16,
+        background: '#f5f5f5', border: '1px solid #e0e0e0', borderRadius: 16,
         padding: '20px', marginBottom: 20,
       }}>
-        <p style={{ fontSize: 13, color: RED, fontWeight: 700, marginBottom: 6, letterSpacing: 1 }}>
-          🕶️ RAY-BAN META — Fiche technique
+        <p style={{ fontSize: 13, color: RED, fontWeight: 700, marginBottom: 8, letterSpacing: 1 }}>
+          👤 FABIAN — Fiche technique Ray-Ban Meta
         </p>
-        <p style={{ fontSize: 14, color: '#666', lineHeight: 1.6 }}>
-          Découvrez les caractéristiques de cette monture connectée révolutionnaire.
+        <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
+          Parfait, Fabian a trouvé sa monture sport ! Avant de passer à la suite, découvrez ses caractéristiques…
         </p>
       </div>
 
@@ -64,7 +64,6 @@ export default function Etape4({ onSuivant }) {
             borderBottom: i < SPECS.length - 1 ? '1px solid #e0e0e0' : 'none',
             alignItems: 'flex-start',
           }}>
-            <span style={{ fontSize: 22, flexShrink: 0, marginTop: 2 }}>{s.emoji}</span>
             <div>
               <div style={{ fontSize: 14, fontWeight: 700, color: '#111', marginBottom: 2 }}>{s.titre}</div>
               <div style={{ fontSize: 13, color: '#666' }}>{s.desc}</div>
@@ -75,11 +74,12 @@ export default function Etape4({ onSuivant }) {
 
       {/* Question */}
       <div style={{
-        background: `${RED}11`, border: `1px solid ${RED}44`, borderRadius: 16,
+        background: '#f5f5f5', border: `1px solid ${RED}44`, borderRadius: 16,
         padding: '18px', marginBottom: 20,
       }}>
+        <p style={{ fontSize: 13, color: '#888', marginBottom: 8, letterSpacing: 2, textTransform: 'uppercase' }}>Mission 4</p>
         <p style={{ fontSize: 15, color: '#111', fontWeight: 700, lineHeight: 1.6 }}>
-          🎯 Que doit-on dire pour activer l'<span style={{ color: RED }}>IA</span> des Ray-Ban Meta ?
+          L'IA de ces lunettes s'active par commande vocale. Quelle est la phrase exacte pour la réveiller ?
         </p>
       </div>
 
