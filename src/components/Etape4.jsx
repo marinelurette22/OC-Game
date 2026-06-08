@@ -10,7 +10,7 @@ const SPECS = [
   { titre: 'Appels mains-libres', desc: 'Micro intégré' },
   { titre: 'IA intégrée', desc: 'Commande vocale' },
   { titre: 'Traduction instantanée', desc: 'En temps réel' },
-  { titre: 'Autonomie', desc: '4h · étui de recharge' },
+  { titre: 'Autonomie', desc: '8h · étui de recharge' },
   { titre: 'Résistance', desc: 'Éclaboussures IPX4' },
 ]
 
