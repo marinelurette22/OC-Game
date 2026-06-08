@@ -22,7 +22,7 @@ export default function Bravo() {
         }} />
 
         <p style={{ fontSize: 17, color: '#ccc', lineHeight: 1.7, marginBottom: 32, maxWidth: 320 }}>
-          Tu as relevé le défi OC Game ! Tu as prouvé que tu es un vrai expert de l'optique 🕶️
+          Tu as relevé le défi OC'nigme ! Tu as prouvé que tu es un vrai expert de l'optique 🕶️
         </p>
 
         {/* Prix */}

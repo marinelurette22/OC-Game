@@ -20,7 +20,7 @@ export default function AgeSelect({ onFacile, onDifficile }) {
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           fontWeight: 900, fontSize: 17, color: '#fff',
         }}>OC</div>
-        <span style={{ fontWeight: 900, fontSize: 24, color: '#fff', letterSpacing: 3 }}>GAME</span>
+        <span style={{ fontWeight: 900, fontSize: 24, color: '#fff', letterSpacing: 3 }}>'NIGME</span>
       </div>
 
       <h2 style={{ fontSize: 20, fontWeight: 800, color: '#fff', marginBottom: 8, textAlign: 'center' }}>

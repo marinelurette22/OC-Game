@@ -32,7 +32,7 @@ export default function Layout({ children, etape = null, total = 5 }) {
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             fontWeight: 900, fontSize: 14, color: '#fff', letterSpacing: 1,
           }}>OC</div>
-          <span style={{ fontWeight: 800, fontSize: 16, color: '#fff', letterSpacing: 2 }}>GAME</span>
+          <span style={{ fontWeight: 800, fontSize: 16, color: '#fff', letterSpacing: 2 }}>'NIGME</span>
         </div>
 
         {/* Progress */}

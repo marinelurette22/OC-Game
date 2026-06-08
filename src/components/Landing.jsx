@@ -22,7 +22,7 @@ export default function Landing({ onStart }) {
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           fontWeight: 900, fontSize: 20, color: '#fff', letterSpacing: 1,
         }}>OC</div>
-        <span style={{ fontWeight: 900, fontSize: 28, color: '#fff', letterSpacing: 3 }}>GAME</span>
+        <span style={{ fontWeight: 900, fontSize: 28, color: '#fff', letterSpacing: 3 }}>'NIGME</span>
       </div>
 
       {/* Icône lunettes */}
