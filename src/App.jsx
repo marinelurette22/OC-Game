@@ -10,16 +10,56 @@ import Etape5 from './components/Etape5'
 import Etape6 from './components/Etape6'
 import Bravo from './components/Bravo'
 
-export default function App() {
-  const [ecran, setEcran] = useState('landing') // landing | age | coming-soon | etape1..5 | bravo
+const RED = '#C8102E'
 
-  const suivant = (prochain) => setEcran(prochain)
+function FlashSuccess({ onDone }) {
+  return (
+    <div
+      style={{
+        position: 'fixed', inset: 0,
+        background: RED,
+        display: 'flex', flexDirection: 'column',
+        alignItems: 'center', justifyContent: 'center',
+        zIndex: 9999,
+        animation: 'flashIn 0.2s ease',
+      }}
+      onAnimationEnd={() => setTimeout(onDone, 700)}
+    >
+      <div style={{ fontSize: 56, marginBottom: 20 }}>✓</div>
+      <p style={{ fontSize: 28, fontWeight: 900, color: '#fff', letterSpacing: 3, textTransform: 'uppercase' }}>
+        Bonne réponse !
+      </p>
+      <style>{`
+        @keyframes flashIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+      `}</style>
+    </div>
+  )
+}
+
+export default function App() {
+  const [ecran, setEcran] = useState('landing')
+  const [flash, setFlash] = useState(false)
+  const [prochain, setProchain] = useState(null)
+
+  const suivant = (ecranSuivant) => {
+    setProchain(ecranSuivant)
+    setFlash(true)
+  }
+
+  const apresFlash = () => {
+    setFlash(false)
+    setEcran(prochain)
+  }
 
   return (
-    <div style={{ minHeight: '100vh', background: '#0a0a0a', display: 'flex', flexDirection: 'column' }}>
-      {ecran === 'landing'      && <Landing       onStart={() => suivant('age')} />}
-      {ecran === 'age'          && <AgeSelect     onFacile={() => suivant('etape1')} onDifficile={() => suivant('coming-soon')} />}
-      {ecran === 'coming-soon'  && <ComingSoon    onRetour={() => suivant('age')} />}
+    <div style={{ minHeight: '100vh', background: '#ffffff', display: 'flex', flexDirection: 'column' }}>
+      {flash && <FlashSuccess onDone={apresFlash} />}
+      {ecran === 'landing'      && <Landing       onStart={() => setEcran('age')} />}
+      {ecran === 'age'          && <AgeSelect     onFacile={() => setEcran('etape1')} onDifficile={() => setEcran('coming-soon')} />}
+      {ecran === 'coming-soon'  && <ComingSoon    onRetour={() => setEcran('age')} />}
       {ecran === 'etape1'       && <Etape1        onSuivant={() => suivant('etape2')} />}
       {ecran === 'etape2'       && <Etape2        onSuivant={() => suivant('etape3')} />}
       {ecran === 'etape3'       && <Etape3        onSuivant={() => suivant('etape4')} />}
