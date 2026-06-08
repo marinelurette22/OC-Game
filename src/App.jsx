@@ -1,122 +1,30 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import Landing from './components/Landing'
+import AgeSelect from './components/AgeSelect'
+import ComingSoon from './components/ComingSoon'
+import Etape1 from './components/Etape1'
+import Etape2 from './components/Etape2'
+import Etape3 from './components/Etape3'
+import Etape4 from './components/Etape4'
+import Etape5 from './components/Etape5'
+import Bravo from './components/Bravo'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [ecran, setEcran] = useState('landing') // landing | age | coming-soon | etape1..5 | bravo
+
+  const suivant = (prochain) => setEcran(prochain)
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+    <div style={{ minHeight: '100vh', background: '#0a0a0a', display: 'flex', flexDirection: 'column' }}>
+      {ecran === 'landing'      && <Landing      onStart={() => suivant('age')} />}
+      {ecran === 'age'          && <AgeSelect     onFacile={() => suivant('etape1')} onDifficile={() => suivant('coming-soon')} />}
+      {ecran === 'coming-soon'  && <ComingSoon    onRetour={() => suivant('age')} />}
+      {ecran === 'etape1'       && <Etape1        onSuivant={() => suivant('etape2')} />}
+      {ecran === 'etape2'       && <Etape2        onSuivant={() => suivant('etape3')} />}
+      {ecran === 'etape3'       && <Etape3        onSuivant={() => suivant('etape4')} />}
+      {ecran === 'etape4'       && <Etape4        onSuivant={() => suivant('etape5')} />}
+      {ecran === 'etape5'       && <Etape5        onSuivant={() => suivant('bravo')} />}
+      {ecran === 'bravo'        && <Bravo />}
+    </div>
   )
 }
-
-export default App
