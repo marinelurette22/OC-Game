@@ -40,20 +40,8 @@ export default function Etape1({ onSuivant }) {
           👤 FABIAN — Responsable optique
         </p>
         <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
-          Fabian veut changer ses 2 paires de lunettes et il a besoin de votre aide pour les choisir !
+          Fabian est le responsable optique du magasin. Il souhaite changer ses 2 paires de lunettes et cherche une monture légère, confortable et dans l'air du temps. Il a besoin de votre aide pour les choisir !
         </p>
-        <div style={{ marginTop: 14, display: 'flex', flexDirection: 'column', gap: 8 }}>
-          {[
-            'Une monture ultra-légère',
-            'Un port confortable toute la journée',
-            'Un style tendance et dans l\'air du temps',
-          ].map((text, i) => (
-            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <div style={{ width: 6, height: 6, borderRadius: '50%', background: RED, flexShrink: 0 }} />
-              <span style={{ fontSize: 14, color: '#444' }}>{text}</span>
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* Question */}
