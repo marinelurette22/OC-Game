@@ -10,12 +10,13 @@ const CADEAUX = [
   { option: "Bouchons d'oreille 🔇",  style: { backgroundColor: '#C8102E', textColor: '#fff' } },
   { option: 'Calendrier 📅',          style: { backgroundColor: '#111',    textColor: '#fff' } },
   { option: 'Jeu de cartes 🃏',       style: { backgroundColor: '#C8102E', textColor: '#fff' } },
-  { option: 'Spray 22ml 🧴',          style: { backgroundColor: '#111',    textColor: '#fff' } },
-  { option: 'Lunettes solaires 🕶️',   style: { backgroundColor: '#C8102E', textColor: '#fff' } },
+  { option: 'Tote bag 👜',            style: { backgroundColor: '#111',    textColor: '#fff' } },
+  { option: 'Spray 22ml 🧴',          style: { backgroundColor: '#C8102E', textColor: '#fff' } },
+  { option: 'Lunettes solaires 🕶️',   style: { backgroundColor: '#111',    textColor: '#fff' } },
 ]
 
-// Probabilités : Éventail 16%, Chamoisine 28%, Bouchons 18%, Calendrier 16%, Jeu de cartes 12%, Spray 8%, Lunettes solaires 2%
-const PROBABILITES = [16, 28, 18, 16, 12, 8, 2]
+// Éventail 17%, Chamoisine 20%, Bouchons 17%, Calendrier 14%, Jeu de cartes 14%, Tote bag 13%, Spray 3%, Lunettes solaires 2%
+const PROBABILITES = [17, 20, 17, 14, 14, 13, 3, 2]
 
 function tirerAuSort() {
   const total = PROBABILITES.reduce((a, b) => a + b, 0)
