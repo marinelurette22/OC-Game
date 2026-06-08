@@ -9,6 +9,7 @@ import Etape4 from './components/Etape4'
 import Etape5 from './components/Etape5'
 import Etape6 from './components/Etape6'
 import Bravo from './components/Bravo'
+import Etape1Difficile from './components/Etape1Difficile'
 
 const RED = '#C8102E'
 
@@ -58,8 +59,9 @@ export default function App() {
     <div style={{ minHeight: '100vh', background: '#ffffff', display: 'flex', flexDirection: 'column' }}>
       {flash && <FlashSuccess onDone={apresFlash} />}
       {ecran === 'landing'      && <Landing       onStart={() => setEcran('age')} />}
-      {ecran === 'age'          && <AgeSelect     onFacile={() => setEcran('etape1')} onDifficile={() => setEcran('coming-soon')} />}
+      {ecran === 'age'          && <AgeSelect     onFacile={() => setEcran('etape1')} onDifficile={() => setEcran('etape1d')} />}
       {ecran === 'coming-soon'  && <ComingSoon    onRetour={() => setEcran('age')} />}
+      {ecran === 'etape1d'      && <Etape1Difficile onSuivant={() => suivant('etape2d')} />}
       {ecran === 'etape1'       && <Etape1        onSuivant={() => suivant('etape2')} />}
       {ecran === 'etape2'       && <Etape2        onSuivant={() => suivant('etape3')} />}
       {ecran === 'etape3'       && <Etape3        onSuivant={() => suivant('etape4')} />}
