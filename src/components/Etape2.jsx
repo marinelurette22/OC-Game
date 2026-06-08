@@ -6,7 +6,7 @@ const BONNE_REPONSE = 'filtre'
 
 const CHOIX = [
   { id: 'antireflet', label: 'Antireflet', desc: 'Réduit les reflets et les éblouissements' },
-  { id: 'durci', label: 'Verre durci', desc: 'Résiste aux rayures du quotidien' },
+  { id: 'durci', label: 'Durci', desc: 'Résiste aux rayures du quotidien' },
   { id: 'filtre', label: 'Filtre lumière bleue', desc: 'Protège des écrans et lumières LED' },
   { id: 'polarise', label: 'Polarisé', desc: 'Élimine les reflets du soleil et de l\'eau' },
 ]
