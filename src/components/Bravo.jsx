@@ -125,7 +125,7 @@ export default function Bravo() {
               <p style={{ fontSize: 14, color: '#888', lineHeight: 1.6 }}>
                 Montre cet écran à ton opticien pour récupérer ton cadeau 😊
               </p>
-              <p style={{ fontSize: 12, color: '#444', marginTop: 8 }}>
+              <p style={{ fontSize: 9, color: '#bbb', marginTop: 8 }}>
                 * Dans la limite des stocks disponibles
               </p>
             </div>
