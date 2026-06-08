@@ -5,13 +5,27 @@ import Layout from './Layout'
 const RED = '#C8102E'
 
 const CADEAUX = [
-  { option: 'Éventail 🌬️',     style: { backgroundColor: '#C8102E', textColor: '#fff' } },
-  { option: 'Calendrier 📅',   style: { backgroundColor: '#111',    textColor: '#fff' } },
-  { option: 'Jeu de cartes 🃏', style: { backgroundColor: '#C8102E', textColor: '#fff' } },
-  { option: 'Éventail 🌬️',     style: { backgroundColor: '#111',    textColor: '#fff' } },
-  { option: 'Calendrier 📅',   style: { backgroundColor: '#C8102E', textColor: '#fff' } },
-  { option: 'Jeu de cartes 🃏', style: { backgroundColor: '#111',    textColor: '#fff' } },
+  { option: 'Éventail 🌬️',           style: { backgroundColor: '#C8102E', textColor: '#fff' } },
+  { option: 'Chamoisine 🧤',          style: { backgroundColor: '#111',    textColor: '#fff' } },
+  { option: "Bouchons d'oreille 🔇",  style: { backgroundColor: '#C8102E', textColor: '#fff' } },
+  { option: 'Calendrier 📅',          style: { backgroundColor: '#111',    textColor: '#fff' } },
+  { option: 'Jeu de cartes 🃏',       style: { backgroundColor: '#C8102E', textColor: '#fff' } },
+  { option: 'Spray 22ml 🧴',          style: { backgroundColor: '#111',    textColor: '#fff' } },
+  { option: 'Lunettes solaires 🕶️',   style: { backgroundColor: '#C8102E', textColor: '#fff' } },
 ]
+
+// Probabilités : Éventail 16%, Chamoisine 28%, Bouchons 18%, Calendrier 16%, Jeu de cartes 12%, Spray 8%, Lunettes solaires 2%
+const PROBABILITES = [16, 28, 18, 16, 12, 8, 2]
+
+function tirerAuSort() {
+  const total = PROBABILITES.reduce((a, b) => a + b, 0)
+  let r = Math.random() * total
+  for (let i = 0; i < PROBABILITES.length; i++) {
+    r -= PROBABILITES[i]
+    if (r <= 0) return i
+  }
+  return PROBABILITES.length - 1
+}
 
 export default function Bravo() {
   const [mustSpin, setMustSpin] = useState(false)
@@ -21,7 +35,7 @@ export default function Bravo() {
 
   const tourner = () => {
     if (mustSpin || aSpinné) return
-    const index = Math.floor(Math.random() * CADEAUX.length)
+    const index = tirerAuSort()
     setPrizeIndex(index)
     setMustSpin(true)
   }
