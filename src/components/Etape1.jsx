@@ -44,13 +44,13 @@ export default function Etape1({ onSuivant }) {
         </p>
         <div style={{ marginTop: 14, display: 'flex', flexDirection: 'column', gap: 8 }}>
           {[
-            { emoji: '🪶', text: 'Une monture ultra-légère' },
-            { emoji: '😌', text: 'Un port confortable toute la journée' },
-            { emoji: '✨', text: 'Un style tendance et dans l\'air du temps' },
-          ].map((item, i) => (
+            'Une monture ultra-légère',
+            'Un port confortable toute la journée',
+            'Un style tendance et dans l\'air du temps',
+          ].map((text, i) => (
             <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <span style={{ fontSize: 18 }}>{item.emoji}</span>
-              <span style={{ fontSize: 14, color: '#444' }}>{item.text}</span>
+              <div style={{ width: 6, height: 6, borderRadius: '50%', background: RED, flexShrink: 0 }} />
+              <span style={{ fontSize: 14, color: '#444' }}>{text}</span>
             </div>
           ))}
         </div>
