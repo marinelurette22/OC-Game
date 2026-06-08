@@ -46,7 +46,7 @@ export default function Etape4({ onSuivant }) {
         <span style={{ fontSize: 13, color: '#888', letterSpacing: 2, textTransform: 'uppercase' }}>Énigme 4 · Ray-Ban Meta</span>
       </div>
 
-      {/* Titre */}
+      {/* Titre + Specs */}
       <div style={{
         background: '#f5f5f5', border: '1px solid #e0e0e0', borderRadius: 16,
         padding: '20px', marginBottom: 20,
@@ -54,20 +54,17 @@ export default function Etape4({ onSuivant }) {
         <p style={{ fontSize: 13, color: RED, fontWeight: 700, marginBottom: 8, letterSpacing: 1 }}>
           👤 FABIAN — Fiche technique Ray-Ban Meta
         </p>
-        <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
-          Parfait, Fabian a trouvé sa monture sport ! Avant de passer à la suite, découvrez ses caractéristiques…
+        <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7, marginBottom: 16 }}>
+          Parfait, Fabian a trouvé sa monture sport ! Voici ses caractéristiques :
         </p>
-      </div>
-
-      {/* Specs en mini-cartes */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 24 }}>
         {SPECS.map((s, i) => (
           <div key={i} style={{
-            background: '#f5f5f5', border: '1px solid #e0e0e0', borderRadius: 12,
-            padding: '12px', textAlign: 'center',
+            display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+            padding: '10px 0',
+            borderTop: '1px solid #e0e0e0',
           }}>
-            <div style={{ fontSize: 13, fontWeight: 700, color: '#111', marginBottom: 4 }}>{s.titre}</div>
-            <div style={{ fontSize: 11, color: '#888', lineHeight: 1.4 }}>{s.desc}</div>
+            <span style={{ fontSize: 14, fontWeight: 700, color: '#111' }}>{s.titre}</span>
+            <span style={{ fontSize: 13, color: '#888' }}>{s.desc}</span>
           </div>
         ))}
       </div>
