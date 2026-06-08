@@ -39,48 +39,33 @@ export default function Etape5({ onSuivant }) {
         <p style={{ fontSize: 13, color: RED, fontWeight: 700, marginBottom: 8, letterSpacing: 1 }}>
           👤 FABIAN — Les verres parfaits
         </p>
-        <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
-          Fabian est facilement ébloui à la lumière, surtout en ce moment. Il a choisi les verres <strong style={{ color: '#fff' }}>Transitions</strong> de dernière génération.
+        <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7, marginBottom: 16 }}>
+          Pour ses Ray-Ban Meta, Fabian a besoin de verres qui s'adaptent à toutes les conditions — que ce soit sous le soleil ou à l'ombre pendant ses runs. Il a choisi les verres <strong style={{ color: '#111' }}>Transitions</strong> de dernière génération.
         </p>
-      </div>
-
-      {/* Indices */}
-      <div style={{
-        background: '#f5f5f5', border: `1px solid ${RED}44`, borderRadius: 16,
-        padding: '20px', marginBottom: 20,
-      }}>
-        <p style={{ fontSize: 13, color: '#888', marginBottom: 14, letterSpacing: 1, textTransform: 'uppercase' }}>
-          🔍 Indices
-        </p>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-          <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
-            <span style={{ fontSize: 20 }}>🔵</span>
-            <p style={{ fontSize: 15, color: '#333', lineHeight: 1.6 }}>
-              Fabian a choisi la couleur <strong style={{ color: '#60a5fa' }}>bleue</strong>
-            </p>
+        {[
+          { titre: 'Réactivité', desc: 'S\'assombrissent à la lumière, clairs à l\'intérieur' },
+          { titre: '8 teintes', desc: 'Dernière génération disponibles' },
+          { titre: 'Protection UV', desc: 'Totale en toutes circonstances' },
+          { titre: 'Rapidité', desc: 'Réactifs en moins de 30 secondes' },
+        ].map((item, i) => (
+          <div key={i} style={{
+            display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+            padding: '10px 0', borderTop: '1px solid #e0e0e0',
+          }}>
+            <span style={{ fontSize: 14, fontWeight: 700, color: '#111' }}>{item.titre}</span>
+            <span style={{ fontSize: 13, color: '#888', textAlign: 'right', maxWidth: '55%' }}>{item.desc}</span>
           </div>
-          <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
-            <span style={{ fontSize: 20 }}>💡</span>
-            <p style={{ fontSize: 15, color: '#333', lineHeight: 1.6 }}>
-              Les verres Transitions s'assombrissent à la lumière et redeviennent clairs à l'intérieur
-            </p>
-          </div>
-          <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
-            <span style={{ fontSize: 20 }}>🔬</span>
-            <p style={{ fontSize: 15, color: '#333', lineHeight: 1.6 }}>
-              Prenez le verre de démonstration <strong style={{ color: '#60a5fa' }}>saphir</strong> et testez-le avec la lampe UV pour voir la magie opérer !
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* Question */}
       <div style={{
-        background: `${RED}11`, border: `1px solid ${RED}44`, borderRadius: 16,
+        background: '#f5f5f5', border: `1px solid ${RED}44`, borderRadius: 16,
         padding: '18px', marginBottom: 20,
       }}>
+        <p style={{ fontSize: 13, color: '#888', marginBottom: 8, letterSpacing: 2, textTransform: 'uppercase' }}>Mission 5</p>
         <p style={{ fontSize: 15, color: '#111', fontWeight: 700, lineHeight: 1.6 }}>
-          🎯 Comment s'appelle la <span style={{ color: '#60a5fa' }}>teinte bleue</span> de ces verres Transitions ?
+          Fabian adore le bleu. Parmi les 8 teintes Transitions, comment s'appelle sa teinte bleue préférée ?
         </p>
       </div>
 
