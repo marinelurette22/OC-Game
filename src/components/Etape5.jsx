@@ -94,7 +94,7 @@ export default function Etape5({ onSuivant }) {
         />
         {erreur && (
           <p style={{ color: RED, fontSize: 13, marginTop: 8, fontWeight: 600 }}>
-            ❌ Pas encore… Utilisez la lampe UV pour vous aider !
+            Regarde sur la plaquette avec les couleurs !
           </p>
         )}
       </div>
