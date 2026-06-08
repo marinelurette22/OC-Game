@@ -44,7 +44,7 @@ export default function AgeSelect({ onFacile, onDifficile }) {
           <div>
             <div style={{ fontSize: 28, marginBottom: 6 }}>🟢</div>
             <div style={{ fontSize: 18, fontWeight: 800, marginBottom: 4 }}>Moins de 16 ans</div>
-            <div style={{ fontSize: 13, color: '#888' }}>Niveau accessible</div>
+            <div style={{ fontSize: 13, color: '#888' }}>Niveau facile</div>
           </div>
           <span style={{ fontSize: 24, color: RED }}>→</span>
         </button>
@@ -65,7 +65,7 @@ export default function AgeSelect({ onFacile, onDifficile }) {
           <div>
             <div style={{ fontSize: 28, marginBottom: 6 }}>🔴</div>
             <div style={{ fontSize: 18, fontWeight: 800, marginBottom: 4 }}>16 ans et plus</div>
-            <div style={{ fontSize: 13, color: '#888' }}>Niveau expert</div>
+            <div style={{ fontSize: 13, color: '#888' }}>Niveau difficile</div>
           </div>
           <span style={{ fontSize: 24, color: '#555' }}>→</span>
         </button>
