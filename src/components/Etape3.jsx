@@ -50,7 +50,7 @@ export default function Etape3({ onSuivant }) {
         padding: '20px', marginBottom: 24,
       }}>
         <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7, marginBottom: 16 }}>
-          Cette monture connectée, disponible dans notre magasin, lui permet de filmer, prendre des photos, écouter de la musique et répondre au téléphone… sans jamais s'arrêter de courir.
+          Cette monture connectée, disponible dans notre magasin, lui permet de filmer, prendre des photos, écouter de la musique et répondre au téléphone… sans jamais s'arrêter de courir. Elle est même dotée de l'<span style={{ color: RED, fontWeight: 600 }}>intelligence artificielle</span>.
         </p>
         <p style={{ fontSize: 15, color: '#111', fontWeight: 600, lineHeight: 1.6 }}>
           Quelle est cette <span style={{ color: RED }}>marque</span> ?
