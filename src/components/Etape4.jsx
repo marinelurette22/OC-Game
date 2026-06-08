@@ -9,6 +9,7 @@ const SPECS = [
   { titre: 'Haut-parleurs', desc: 'Son open-ear spatial' },
   { titre: 'Appels mains-libres', desc: 'Micro intégré' },
   { titre: 'IA intégrée', desc: 'Commande vocale' },
+  { titre: 'Traduction instantanée', desc: 'En temps réel' },
   { titre: 'Autonomie', desc: '4h · étui de recharge' },
   { titre: 'Résistance', desc: 'Éclaboussures IPX4' },
 ]
