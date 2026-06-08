@@ -40,7 +40,7 @@ export default function Etape1({ onSuivant }) {
           👤 FABIAN — Responsable optique
         </p>
         <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
-          Fabian est le responsable optique. Il veut renouveler ses 2 paires de lunettes et cherche une monture légère, confortable et dans l'air du temps. Il a besoin de vous !
+          Fabian souhaite changer ses 2 paires de lunettes. Il cherche une monture légère, confortable et dans l'air du temps. Il a besoin de votre aide pour les choisir !
         </p>
       </div>
 
@@ -53,10 +53,13 @@ export default function Etape1({ onSuivant }) {
           🔍 Mission 1
         </p>
         <p style={{ fontSize: 16, color: '#111', lineHeight: 1.7, fontWeight: 600 }}>
-          Pour sa première paire, il a craqué pour une marque vendue ici même.
+          La marque qu'il a choisie est disponible dans notre magasin.
         </p>
         <p style={{ fontSize: 15, color: '#555', lineHeight: 1.7, marginTop: 12 }}>
-          Indice : c'est un <span style={{ color: RED, fontWeight: 700 }}>palindrome</span> — elle se lit pareil dans les deux sens. Vous la reconnaissez ?
+          Elle a une particularité : c'est un <span style={{ color: RED, fontWeight: 700 }}>palindrome</span> — elle se lit pareil dans les deux sens.
+        </p>
+        <p style={{ fontSize: 15, color: '#555', lineHeight: 1.7, marginTop: 12 }}>
+          À votre avis, quel est son nom ?
         </p>
       </div>
 
