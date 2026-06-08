@@ -41,8 +41,11 @@ export default function Landing({ onStart }) {
           background: `linear-gradient(to right, transparent, ${RED}, transparent)`,
           marginBottom: 20,
         }} />
-        <p style={{ fontSize: 14, color: '#666', lineHeight: 1.6 }}>
+        <p style={{ fontSize: 14, color: '#666', lineHeight: 1.6, marginBottom: 16 }}>
           Résous-les toutes et tente de remporter un cadeau !
+        </p>
+        <p style={{ fontSize: 13, color: RED, fontWeight: 700, letterSpacing: 1 }}>
+          La team OC Neuvillette te met au défi !
         </p>
       </div>
 
