@@ -46,7 +46,7 @@ export default function Etape2({ onSuivant }) {
           👤 FABIAN — Responsable optique
         </p>
         <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
-          Fabian travaille beaucoup sur les écrans et sous lumières artificielles dans notre magasin.
+          Fabian passe ses journées entre les écrans et les néons du magasin. Le soir, il rentre chez lui avec les yeux fatigués et une sensation de gêne visuelle.
         </p>
       </div>
 
@@ -59,10 +59,7 @@ export default function Etape2({ onSuivant }) {
           🔍 Mission 2
         </p>
         <p style={{ fontSize: 16, color: '#111', lineHeight: 1.7, fontWeight: 600 }}>
-          Quel traitement de verres lui est préconisé ?
-        </p>
-        <p style={{ fontSize: 14, color: '#aaa', marginTop: 8 }}>
-          Sélectionne la bonne réponse 👇
+          Pour soulager ses yeux au quotidien, quel traitement de verres lui conseillez-vous ?
         </p>
       </div>
 
@@ -88,7 +85,6 @@ export default function Etape2({ onSuivant }) {
               transition: 'all 0.15s',
             }}
           >
-            <span style={{ fontSize: 22 }}>{c.emoji}</span>
             {c.label}
           </button>
         ))}
@@ -96,7 +92,7 @@ export default function Etape2({ onSuivant }) {
 
       {erreur && (
         <p style={{ color: RED, fontSize: 13, marginBottom: 12, fontWeight: 600, textAlign: 'center' }}>
-          ❌ Ce n'est pas le bon traitement… Réfléchis encore !
+          Ce n'est pas le bon traitement… Réfléchis encore !
         </p>
       )}
 
