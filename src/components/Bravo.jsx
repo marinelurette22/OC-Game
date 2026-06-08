@@ -5,14 +5,14 @@ import Layout from './Layout'
 const RED = '#C8102E'
 
 const CADEAUX = [
-  { option: 'Éventail 🌬️',           style: { backgroundColor: '#C8102E', textColor: '#fff' } },
-  { option: 'Chamoisine 🧤',          style: { backgroundColor: '#111',    textColor: '#fff' } },
-  { option: "Bouchons d'oreille 🔇",  style: { backgroundColor: '#C8102E', textColor: '#fff' } },
-  { option: 'Calendrier 📅',          style: { backgroundColor: '#111',    textColor: '#fff' } },
-  { option: 'Jeu de cartes 🃏',       style: { backgroundColor: '#C8102E', textColor: '#fff' } },
-  { option: 'Tote bag 👜',            style: { backgroundColor: '#111',    textColor: '#fff' } },
-  { option: 'Spray 22ml 🧴',          style: { backgroundColor: '#C8102E', textColor: '#fff' } },
-  { option: 'Lunettes solaires 🕶️',   style: { backgroundColor: '#111',    textColor: '#fff' } },
+  { option: 'Éventail',           style: { backgroundColor: '#C8102E', textColor: '#fff' } },
+  { option: 'Chamoisine',         style: { backgroundColor: '#111',    textColor: '#fff' } },
+  { option: "Bouchons d'oreille", style: { backgroundColor: '#C8102E', textColor: '#fff' } },
+  { option: 'Calendrier',         style: { backgroundColor: '#111',    textColor: '#fff' } },
+  { option: 'Jeu de cartes',      style: { backgroundColor: '#C8102E', textColor: '#fff' } },
+  { option: 'Tote bag',           style: { backgroundColor: '#111',    textColor: '#fff' } },
+  { option: 'Spray 22ml',         style: { backgroundColor: '#C8102E', textColor: '#fff' } },
+  { option: 'Lunettes solaires',  style: { backgroundColor: '#111',    textColor: '#fff' } },
 ]
 
 // Éventail 17%, Chamoisine 20%, Bouchons 17%, Calendrier 14%, Jeu de cartes 14%, Tote bag 13%, Spray 3%, Lunettes solaires 2%
