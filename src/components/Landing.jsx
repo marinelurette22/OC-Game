@@ -20,9 +20,6 @@ export default function Landing({ onStart }) {
         <span style={{ fontWeight: 900, fontSize: 28, color: '#111', letterSpacing: 3 }}>'NIGME</span>
       </div>
 
-      {/* Icône lunettes */}
-      <div style={{ fontSize: 64, marginBottom: 32 }}>🕹️</div>
-
       {/* Accroche */}
       <div style={{
         background: '#f5f5f5',
@@ -33,12 +30,12 @@ export default function Landing({ onStart }) {
         marginBottom: 40,
       }}>
         <p style={{ fontSize: 13, color: '#888', letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>
-          Tu t'ennuies ?
+          Prêt pour le défi ?
         </p>
         <h1 style={{ fontSize: 22, fontWeight: 900, color: '#111', lineHeight: 1.3, marginBottom: 12 }}>
-          Amateur de défi ?
+          Amateur de défis ?
         </h1>
-        <p style={{ fontSize: 16, color: '#ccc', lineHeight: 1.6, marginBottom: 20 }}>
+        <p style={{ fontSize: 16, color: '#555', lineHeight: 1.6, marginBottom: 20 }}>
           Oseras-tu relever le nôtre ?
         </p>
         <div style={{
@@ -48,7 +45,7 @@ export default function Landing({ onStart }) {
           marginBottom: 20,
         }} />
         <p style={{ fontSize: 14, color: '#666', lineHeight: 1.6 }}>
-          5 énigmes autour de l'optique t'attendent. Sauras-tu toutes les résoudre ?
+          6 énigmes autour de l'optique t'attendent. Sauras-tu toutes les résoudre ?
         </p>
       </div>
 
