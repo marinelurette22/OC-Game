@@ -17,7 +17,7 @@ function FlashSuccess({ onDone }) {
     <div
       style={{
         position: 'fixed', inset: 0,
-        background: RED,
+        background: '#ffffff',
         display: 'flex', flexDirection: 'column',
         alignItems: 'center', justifyContent: 'center',
         zIndex: 9999,
@@ -25,8 +25,8 @@ function FlashSuccess({ onDone }) {
       }}
       onAnimationEnd={() => setTimeout(onDone, 700)}
     >
-      <div style={{ fontSize: 56, marginBottom: 20 }}>✓</div>
-      <p style={{ fontSize: 28, fontWeight: 900, color: '#fff', letterSpacing: 3, textTransform: 'uppercase' }}>
+      <div style={{ fontSize: 72, color: RED, marginBottom: 20, fontWeight: 900 }}>✓</div>
+      <p style={{ fontSize: 28, fontWeight: 900, color: RED, letterSpacing: 3, textTransform: 'uppercase' }}>
         Bonne réponse !
       </p>
       <style>{`
