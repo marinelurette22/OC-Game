@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 
 const RED = '#C8102E'
 
-export default function Layout({ children, etape = null, total = 5 }) {
+export default function Layout({ children, etape = null, total = 6 }) {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [etape])
