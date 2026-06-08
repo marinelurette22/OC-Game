@@ -1,6 +1,12 @@
+import { useEffect } from 'react'
+
 const RED = '#C8102E'
 
 export default function Layout({ children, etape = null, total = 5 }) {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [etape])
+
   return (
     <div style={{
       minHeight: '100vh',
