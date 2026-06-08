@@ -42,6 +42,18 @@ export default function Etape1({ onSuivant }) {
         <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
           Fabian veut changer ses 2 paires de lunettes et il a besoin de votre aide pour les choisir !
         </p>
+        <div style={{ marginTop: 14, display: 'flex', flexDirection: 'column', gap: 8 }}>
+          {[
+            { emoji: '🪶', text: 'Une monture ultra-légère' },
+            { emoji: '😌', text: 'Un port confortable toute la journée' },
+            { emoji: '✨', text: 'Un style tendance et dans l\'air du temps' },
+          ].map((item, i) => (
+            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+              <span style={{ fontSize: 18 }}>{item.emoji}</span>
+              <span style={{ fontSize: 14, color: '#444' }}>{item.text}</span>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Question */}
@@ -53,10 +65,10 @@ export default function Etape1({ onSuivant }) {
           🔍 Mission 1
         </p>
         <p style={{ fontSize: 16, color: '#111', lineHeight: 1.7, fontWeight: 600 }}>
-          Pour sa première paire, Fabian a choisi une marque présente dans notre magasin.
+          La marque qu'il a choisie est disponible dans notre magasin.
         </p>
         <p style={{ fontSize: 15, color: '#555', lineHeight: 1.7, marginTop: 12 }}>
-          Cette marque a une particularité : c'est un <span style={{ color: RED, fontWeight: 700 }}>palindrome</span> — elle se lit pareil dans les deux sens.
+          Elle a une particularité : c'est un <span style={{ color: RED, fontWeight: 700 }}>palindrome</span> — elle se lit pareil dans les deux sens.
         </p>
         <p style={{ fontSize: 15, color: '#555', lineHeight: 1.7, marginTop: 12 }}>
           À votre avis, quel est son nom ?
