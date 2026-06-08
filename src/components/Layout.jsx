@@ -26,13 +26,7 @@ export default function Layout({ children, etape = null, total = 5 }) {
       }}>
         {/* Logo OC */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <div style={{
-            width: 36, height: 36,
-            background: RED,
-            borderRadius: 6,
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontWeight: 900, fontSize: 14, color: '#fff', letterSpacing: 1,
-          }}>OC</div>
+          <img src="/logo-oc.png" alt="Optical Center" style={{ height: 36, width: 'auto' }} />
           <span style={{ fontWeight: 800, fontSize: 16, color: '#111', letterSpacing: 2 }}>'NIGME</span>
         </div>
 

@@ -16,11 +16,7 @@ export default function AgeSelect({ onFacile, onDifficile }) {
     }}>
       {/* Logo */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 48 }}>
-        <div style={{
-          width: 44, height: 44, background: RED, borderRadius: 8,
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          fontWeight: 900, fontSize: 17, color: '#fff',
-        }}>OC</div>
+        <img src="/logo-oc.png" alt="Optical Center" style={{ height: 52, width: 'auto' }} />
         <span style={{ fontWeight: 900, fontSize: 24, color: '#111', letterSpacing: 3 }}>'NIGME</span>
       </div>
 

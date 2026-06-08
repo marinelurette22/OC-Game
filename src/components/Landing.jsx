@@ -16,13 +16,7 @@ export default function Landing({ onStart }) {
     }}>
       {/* Logo */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 40 }}>
-        <div style={{
-          width: 52, height: 52,
-          background: RED,
-          borderRadius: 10,
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          fontWeight: 900, fontSize: 20, color: '#fff', letterSpacing: 1,
-        }}>OC</div>
+        <img src="/logo-oc.png" alt="Optical Center" style={{ height: 60, width: 'auto' }} />
         <span style={{ fontWeight: 900, fontSize: 28, color: '#111', letterSpacing: 3 }}>'NIGME</span>
       </div>
 
