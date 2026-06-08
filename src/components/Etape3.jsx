@@ -44,17 +44,39 @@ export default function Etape3({ onSuivant }) {
         </p>
       </div>
 
-      {/* Liste des fonctionnalités */}
-      <div style={{
-        background: '#f5f5f5', border: `1px solid ${RED}44`, borderRadius: 16,
-        padding: '20px', marginBottom: 24,
-      }}>
-        <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7, marginBottom: 16 }}>
-          Cette monture connectée, disponible dans notre magasin, lui permet de filmer, prendre des photos, écouter de la musique et répondre au téléphone… sans jamais s'arrêter de courir. Elle est même dotée de l'<span style={{ color: RED, fontWeight: 600 }}>intelligence artificielle</span>.
+      {/* Fonctionnalités */}
+      <div style={{ marginBottom: 24 }}>
+        <p style={{ fontSize: 13, color: '#888', letterSpacing: 2, textTransform: 'uppercase', marginBottom: 14 }}>
+          Cette monture lui permet de…
         </p>
-        <p style={{ fontSize: 15, color: '#111', fontWeight: 600, lineHeight: 1.6 }}>
-          Quelle est cette <span style={{ color: RED }}>marque</span> ?
-        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 16 }}>
+          {[
+            { titre: 'Filmer', desc: 'Ses exploits sportifs' },
+            { titre: 'Photographier', desc: 'Sans sortir son téléphone' },
+            { titre: 'Écouter', desc: 'Musique & podcasts' },
+            { titre: 'Appeler', desc: 'Mains libres en courant' },
+          ].map((item, i) => (
+            <div key={i} style={{
+              background: '#f5f5f5',
+              border: '1px solid #e0e0e0',
+              borderRadius: 12,
+              padding: '14px 12px',
+              textAlign: 'center',
+            }}>
+              <div style={{ fontSize: 14, fontWeight: 700, color: '#111', marginBottom: 4 }}>{item.titre}</div>
+              <div style={{ fontSize: 12, color: '#888', lineHeight: 1.4 }}>{item.desc}</div>
+            </div>
+          ))}
+        </div>
+
+        <div style={{
+          background: '#f5f5f5', border: `1px solid ${RED}44`, borderRadius: 16,
+          padding: '16px 20px',
+        }}>
+          <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
+            Elle est même dotée de l'<span style={{ color: RED, fontWeight: 600 }}>intelligence artificielle</span>. Disponible dans notre magasin, quelle est cette <span style={{ fontWeight: 700 }}>marque</span> ?
+          </p>
+        </div>
       </div>
 
       {/* Input */}
