@@ -85,7 +85,7 @@ export default function Etape3({ onSuivant }) {
         />
         {erreur && (
           <p style={{ color: RED, fontSize: 13, marginTop: 8, fontWeight: 600 }}>
-            ❌ Pas tout à fait… La réponse est dans le magasin !
+            Pas tout à fait… La réponse est dans le magasin !
           </p>
         )}
       </div>
