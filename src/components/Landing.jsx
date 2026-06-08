@@ -12,6 +12,7 @@ export default function Landing({ onStart }) {
       padding: '40px 24px',
       maxWidth: 480,
       margin: '0 auto',
+      width: '100%',
     }}>
       {/* Logo */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 40 }}>
