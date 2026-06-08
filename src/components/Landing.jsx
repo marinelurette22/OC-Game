@@ -29,8 +29,8 @@ export default function Landing({ onStart }) {
         textAlign: 'center',
         marginBottom: 40,
       }}>
-        <p style={{ fontSize: 13, color: '#888', letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>
-          Prêt pour le défi ?
+        <p style={{ fontSize: 13, color: RED, fontWeight: 700, letterSpacing: 1, marginBottom: 12 }}>
+          La team OC Neuvillette te met au défi !
         </p>
         <h1 style={{ fontSize: 22, fontWeight: 900, color: '#111', lineHeight: 1.3, marginBottom: 12 }}>
           6 énigmes t'attendent
@@ -44,8 +44,8 @@ export default function Landing({ onStart }) {
         <p style={{ fontSize: 14, color: '#666', lineHeight: 1.6, marginBottom: 16 }}>
           Résous-les toutes et tente de remporter un cadeau !
         </p>
-        <p style={{ fontSize: 13, color: RED, fontWeight: 700, letterSpacing: 1 }}>
-          La team OC Neuvillette te met au défi !
+        <p style={{ fontSize: 13, color: '#888', letterSpacing: 2, textTransform: 'uppercase' }}>
+          Prêt pour le défi ?
         </p>
       </div>
 
