@@ -37,10 +37,10 @@ export default function Etape6({ onSuivant }) {
         padding: '20px', marginBottom: 24,
       }}>
         <p style={{ fontSize: 13, color: RED, fontWeight: 700, marginBottom: 8, letterSpacing: 1 }}>
-          DERNIÈRE ÉPREUVE
+          👤 FABIAN — L'épreuve finale
         </p>
         <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
-          Félicitations, tu as tout trouvé ! Mais avant de récupérer ta récompense, une dernière mission t'attend…
+          Bravo, tu as tout trouvé pour aider Fabian ! Mais avant de récupérer ta récompense, une dernière mission secrète t'attend…
         </p>
       </div>
 
