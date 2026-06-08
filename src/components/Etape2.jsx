@@ -72,10 +72,10 @@ export default function Etape2({ onSuivant }) {
             style={{
               width: '100%',
               padding: '16px 20px',
-              background: selection === c.id ? `${RED}15` : '#f5f5f5',
-              border: `2px solid ${selection === c.id ? RED : '#ddd'}`,
+              background: selection === c.id ? '#111' : '#f5f5f5',
+              border: `2px solid ${selection === c.id ? '#111' : '#ddd'}`,
               borderRadius: 12,
-              color: selection === c.id ? RED : '#333',
+              color: selection === c.id ? '#fff' : '#333',
               fontSize: 16,
               fontWeight: selection === c.id ? 700 : 500,
               textAlign: 'left',
