@@ -64,7 +64,7 @@ export default function Etape2({ onSuivant }) {
       </div>
 
       {/* Choix */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 20 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 20 }}>
         {CHOIX.map(c => (
           <button
             key={c.id}
