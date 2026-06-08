@@ -40,7 +40,7 @@ export default function Etape3({ onSuivant }) {
           👤 FABIAN — Sa 2ème paire
         </p>
         <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
-          Fabian est aussi sportif ! Il fait de la course à pied et veut pouvoir simultanément :
+          Fabian est aussi un grand sportif. Passionné de course à pied, il cherche une 2ème paire en complément de ses lunettes de travail — une monture qui le suit dans toutes ses aventures.
         </p>
       </div>
 
@@ -49,27 +49,12 @@ export default function Etape3({ onSuivant }) {
         background: '#f5f5f5', border: `1px solid ${RED}44`, borderRadius: 16,
         padding: '20px', marginBottom: 24,
       }}>
-        {[
-          { emoji: '🎥', text: 'Filmer ses exploits sportifs' },
-          { emoji: '📸', text: 'Prendre des photos' },
-          { emoji: '🎵', text: 'Écouter de la musique' },
-          { emoji: '📞', text: 'Répondre au téléphone en courant' },
-        ].map((item, i) => (
-          <div key={i} style={{
-            display: 'flex', alignItems: 'center', gap: 12,
-            padding: '10px 0',
-            borderBottom: i < 3 ? '1px solid #e0e0e0' : 'none',
-          }}>
-            <span style={{ fontSize: 22 }}>{item.emoji}</span>
-            <span style={{ fontSize: 15, color: '#333' }}>{item.text}</span>
-          </div>
-        ))}
-
-        <div style={{ marginTop: 16, padding: '12px', background: '#fff', borderRadius: 10 }}>
-          <p style={{ fontSize: 15, color: '#111', fontWeight: 600, lineHeight: 1.6 }}>
-            Trouvez le nom de cette marque de <span style={{ color: RED }}>lunettes connectées</span> disponible dans notre magasin.
-          </p>
-        </div>
+        <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7, marginBottom: 16 }}>
+          Cette monture connectée, disponible dans notre magasin, lui permet de filmer, prendre des photos, écouter de la musique et répondre au téléphone… sans jamais s'arrêter de courir.
+        </p>
+        <p style={{ fontSize: 15, color: '#111', fontWeight: 600, lineHeight: 1.6 }}>
+          Quelle est cette <span style={{ color: RED }}>marque</span> ?
+        </p>
       </div>
 
       {/* Input */}
