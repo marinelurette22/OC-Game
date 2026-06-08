@@ -16,7 +16,7 @@ export default function Landing({ onStart }) {
     }}>
       {/* Logo */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 40 }}>
-        <img src="/logo-oc.png" alt="Optical Center" style={{ height: 60, width: 'auto', display: 'block' }} />
+        <img src="/logo-oc.png" alt="Optical Center" style={{ height: 80, width: 'auto', display: 'block' }} />
         <span style={{ fontWeight: 900, fontSize: 36, color: '#111', letterSpacing: 3, lineHeight: 1 }}>'NIGME</span>
       </div>
 
