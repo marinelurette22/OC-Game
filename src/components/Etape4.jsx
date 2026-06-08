@@ -15,10 +15,10 @@ const SPECS = [
 ]
 
 const CHOIX = [
-  { id: 'heymeta', label: 'Hey Meta' },
-  { id: 'okgoogle', label: 'Ok Google' },
-  { id: 'dissiri', label: 'Dis Siri' },
-  { id: 'alexa', label: 'Alexa' },
+  { id: 'okgoogle', label: '"Ok Google"' },
+  { id: 'dissiri', label: '"Dis Siri"' },
+  { id: 'alexa', label: '"Alexa"' },
+  { id: 'heymeta', label: '"Hey Meta"' },
 ]
 
 export default function Etape4({ onSuivant }) {
