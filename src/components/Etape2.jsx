@@ -5,10 +5,10 @@ const RED = '#C8102E'
 const BONNE_REPONSE = 'filtre'
 
 const CHOIX = [
-  { id: 'antireflet', label: 'Antireflet', emoji: '🪟' },
-  { id: 'durci', label: 'Verre durci', emoji: '💎' },
-  { id: 'filtre', label: 'Filtre lumière bleue', emoji: '💻' },
-  { id: 'polarise', label: 'Polarisé', emoji: '🕶️' },
+  { id: 'antireflet', label: 'Antireflet', desc: 'Réduit les reflets et les éblouissements' },
+  { id: 'durci', label: 'Verre durci', desc: 'Résiste aux rayures du quotidien' },
+  { id: 'filtre', label: 'Filtre lumière bleue', desc: 'Protège des écrans et lumières LED' },
+  { id: 'polarise', label: 'Polarisé', desc: 'Élimine les reflets du soleil et de l\'eau' },
 ]
 
 export default function Etape2({ onSuivant }) {
@@ -71,21 +71,23 @@ export default function Etape2({ onSuivant }) {
             onClick={() => { setSelection(c.id); setErreur(false) }}
             style={{
               width: '100%',
-              padding: '16px 20px',
+              padding: '16px 12px',
               background: selection === c.id ? '#111' : '#f5f5f5',
               border: `2px solid ${selection === c.id ? '#111' : '#ddd'}`,
               borderRadius: 12,
               color: selection === c.id ? '#fff' : '#333',
-              fontSize: 16,
-              fontWeight: selection === c.id ? 700 : 500,
-              textAlign: 'left',
+              textAlign: 'center',
               display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
-              gap: 12,
+              gap: 6,
               transition: 'all 0.15s',
+              minHeight: 90,
+              justifyContent: 'center',
             }}
           >
-            {c.label}
+            <span style={{ fontSize: 14, fontWeight: 700, lineHeight: 1.3 }}>{c.label}</span>
+            <span style={{ fontSize: 11, opacity: 0.7, lineHeight: 1.4 }}>{c.desc}</span>
           </button>
         ))}
       </div>
