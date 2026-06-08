@@ -39,26 +39,26 @@ export default function Etape2({ onSuivant }) {
 
       {/* Mise en scène */}
       <div style={{
-        background: '#111', border: '1px solid #222', borderRadius: 16,
+        background: '#f5f5f5', border: '1px solid #e0e0e0', borderRadius: 16,
         padding: '20px', marginBottom: 24,
       }}>
         <p style={{ fontSize: 13, color: RED, fontWeight: 700, marginBottom: 8, letterSpacing: 1 }}>
           👤 FABIAN — Responsable optique
         </p>
-        <p style={{ fontSize: 15, color: '#ddd', lineHeight: 1.7 }}>
+        <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
           Fabian travaille beaucoup sur les écrans et sous lumières artificielles dans notre magasin.
         </p>
       </div>
 
       {/* Question */}
       <div style={{
-        background: '#111', border: `1px solid ${RED}33`, borderRadius: 16,
+        background: '#f5f5f5', border: `1px solid ${RED}44`, borderRadius: 16,
         padding: '20px', marginBottom: 24,
       }}>
         <p style={{ fontSize: 13, color: '#888', marginBottom: 12, letterSpacing: 1, textTransform: 'uppercase' }}>
           🔍 Mission 2
         </p>
-        <p style={{ fontSize: 16, color: '#fff', lineHeight: 1.7, fontWeight: 600 }}>
+        <p style={{ fontSize: 16, color: '#111', lineHeight: 1.7, fontWeight: 600 }}>
           Quel traitement de verres lui est préconisé ?
         </p>
         <p style={{ fontSize: 14, color: '#aaa', marginTop: 8 }}>
@@ -75,10 +75,10 @@ export default function Etape2({ onSuivant }) {
             style={{
               width: '100%',
               padding: '16px 20px',
-              background: selection === c.id ? `${RED}22` : '#111',
-              border: `2px solid ${selection === c.id ? RED : '#333'}`,
+              background: selection === c.id ? `${RED}15` : '#f5f5f5',
+              border: `2px solid ${selection === c.id ? RED : '#ddd'}`,
               borderRadius: 12,
-              color: selection === c.id ? '#fff' : '#bbb',
+              color: selection === c.id ? RED : '#333',
               fontSize: 16,
               fontWeight: selection === c.id ? 700 : 500,
               textAlign: 'left',
@@ -103,8 +103,8 @@ export default function Etape2({ onSuivant }) {
       <button onClick={valider} disabled={!selection} style={{
         width: '100%',
         padding: '16px',
-        background: selection ? RED : '#222',
-        color: selection ? '#fff' : '#555',
+        background: selection ? RED : '#ddd',
+        color: selection ? '#fff' : '#999',
         border: 'none',
         borderRadius: 12,
         fontSize: 16,

@@ -7,7 +7,7 @@ export default function ComingSoon({ onRetour }) {
     <Layout>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '80vh', textAlign: 'center' }}>
         <div style={{ fontSize: 72, marginBottom: 24 }}>🔒</div>
-        <h2 style={{ fontSize: 28, fontWeight: 900, color: '#fff', marginBottom: 12, letterSpacing: 2 }}>
+        <h2 style={{ fontSize: 28, fontWeight: 900, color: '#111', marginBottom: 12, letterSpacing: 2 }}>
           COMING SOON
         </h2>
         <p style={{ fontSize: 16, color: '#888', lineHeight: 1.6, marginBottom: 12 }}>

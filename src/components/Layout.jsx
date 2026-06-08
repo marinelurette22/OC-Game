@@ -4,7 +4,7 @@ export default function Layout({ children, etape = null, total = 5 }) {
   return (
     <div style={{
       minHeight: '100vh',
-      background: '#0a0a0a',
+      background: '#ffffff',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -16,8 +16,9 @@ export default function Layout({ children, etape = null, total = 5 }) {
       {/* Header */}
       <div style={{
         width: '100%',
-        background: '#111',
+        background: '#fff',
         borderBottom: `3px solid ${RED}`,
+        boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
         padding: '16px 20px',
         display: 'flex',
         alignItems: 'center',
@@ -32,7 +33,7 @@ export default function Layout({ children, etape = null, total = 5 }) {
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             fontWeight: 900, fontSize: 14, color: '#fff', letterSpacing: 1,
           }}>OC</div>
-          <span style={{ fontWeight: 800, fontSize: 16, color: '#fff', letterSpacing: 2 }}>'NIGME</span>
+          <span style={{ fontWeight: 800, fontSize: 16, color: '#111', letterSpacing: 2 }}>'NIGME</span>
         </div>
 
         {/* Progress */}
@@ -43,7 +44,7 @@ export default function Layout({ children, etape = null, total = 5 }) {
               {Array.from({ length: total }).map((_, i) => (
                 <div key={i} style={{
                   width: 20, height: 4, borderRadius: 2,
-                  background: i < etape ? RED : '#333',
+                  background: i < etape ? RED : '#ddd',
                   transition: 'background 0.3s',
                 }} />
               ))}

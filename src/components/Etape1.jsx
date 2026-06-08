@@ -33,32 +33,32 @@ export default function Etape1({ onSuivant }) {
 
       {/* Mise en scène */}
       <div style={{
-        background: '#111', border: '1px solid #222', borderRadius: 16,
+        background: '#f5f5f5', border: '1px solid #e0e0e0', borderRadius: 16,
         padding: '20px', marginBottom: 24,
       }}>
         <p style={{ fontSize: 13, color: RED, fontWeight: 700, marginBottom: 8, letterSpacing: 1 }}>
           👤 FABIAN — Responsable optique
         </p>
-        <p style={{ fontSize: 15, color: '#ddd', lineHeight: 1.7 }}>
+        <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
           Fabian veut changer ses 2 paires de lunettes et il a besoin de votre aide pour les choisir !
         </p>
       </div>
 
       {/* Question */}
       <div style={{
-        background: '#111', border: `1px solid ${RED}33`, borderRadius: 16,
+        background: '#f5f5f5', border: `1px solid ${RED}44`, borderRadius: 16,
         padding: '20px', marginBottom: 28,
       }}>
         <p style={{ fontSize: 13, color: '#888', marginBottom: 12, letterSpacing: 1, textTransform: 'uppercase' }}>
           🔍 Mission 1
         </p>
-        <p style={{ fontSize: 16, color: '#fff', lineHeight: 1.7, fontWeight: 600 }}>
+        <p style={{ fontSize: 16, color: '#111', lineHeight: 1.7, fontWeight: 600 }}>
           Pour sa première paire, Fabian a choisi une marque présente dans notre magasin.
         </p>
-        <p style={{ fontSize: 15, color: '#ccc', lineHeight: 1.7, marginTop: 12 }}>
+        <p style={{ fontSize: 15, color: '#555', lineHeight: 1.7, marginTop: 12 }}>
           Cette marque a une particularité : c'est un <span style={{ color: RED, fontWeight: 700 }}>palindrome</span> — elle se lit pareil dans les deux sens.
         </p>
-        <p style={{ fontSize: 15, color: '#ccc', lineHeight: 1.7, marginTop: 12 }}>
+        <p style={{ fontSize: 15, color: '#555', lineHeight: 1.7, marginTop: 12 }}>
           À votre avis, quel est son nom ?
         </p>
       </div>
@@ -74,10 +74,10 @@ export default function Etape1({ onSuivant }) {
           style={{
             width: '100%',
             padding: '16px',
-            background: '#111',
-            border: `2px solid ${erreur ? RED : '#333'}`,
+            background: '#fff',
+            border: `2px solid ${erreur ? RED : '#ddd'}`,
             borderRadius: 12,
-            color: '#fff',
+            color: '#111',
             fontSize: 18,
             fontWeight: 700,
             letterSpacing: 2,

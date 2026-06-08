@@ -33,20 +33,20 @@ export default function Etape5({ onSuivant }) {
 
       {/* Mise en scène */}
       <div style={{
-        background: '#111', border: '1px solid #222', borderRadius: 16,
+        background: '#f5f5f5', border: '1px solid #e0e0e0', borderRadius: 16,
         padding: '20px', marginBottom: 24,
       }}>
         <p style={{ fontSize: 13, color: RED, fontWeight: 700, marginBottom: 8, letterSpacing: 1 }}>
           👤 FABIAN — Les verres parfaits
         </p>
-        <p style={{ fontSize: 15, color: '#ddd', lineHeight: 1.7 }}>
+        <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
           Fabian est facilement ébloui à la lumière, surtout en ce moment. Il a choisi les verres <strong style={{ color: '#fff' }}>Transitions</strong> de dernière génération.
         </p>
       </div>
 
       {/* Indices */}
       <div style={{
-        background: '#111', border: `1px solid ${RED}33`, borderRadius: 16,
+        background: '#f5f5f5', border: `1px solid ${RED}44`, borderRadius: 16,
         padding: '20px', marginBottom: 20,
       }}>
         <p style={{ fontSize: 13, color: '#888', marginBottom: 14, letterSpacing: 1, textTransform: 'uppercase' }}>
@@ -55,19 +55,19 @@ export default function Etape5({ onSuivant }) {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
             <span style={{ fontSize: 20 }}>🔵</span>
-            <p style={{ fontSize: 15, color: '#ddd', lineHeight: 1.6 }}>
+            <p style={{ fontSize: 15, color: '#333', lineHeight: 1.6 }}>
               Fabian a choisi la couleur <strong style={{ color: '#60a5fa' }}>bleue</strong>
             </p>
           </div>
           <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
             <span style={{ fontSize: 20 }}>💡</span>
-            <p style={{ fontSize: 15, color: '#ddd', lineHeight: 1.6 }}>
+            <p style={{ fontSize: 15, color: '#333', lineHeight: 1.6 }}>
               Les verres Transitions s'assombrissent à la lumière et redeviennent clairs à l'intérieur
             </p>
           </div>
           <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
             <span style={{ fontSize: 20 }}>🔬</span>
-            <p style={{ fontSize: 15, color: '#ddd', lineHeight: 1.6 }}>
+            <p style={{ fontSize: 15, color: '#333', lineHeight: 1.6 }}>
               Prenez le verre de démonstration <strong style={{ color: '#60a5fa' }}>saphir</strong> et testez-le avec la lampe UV pour voir la magie opérer !
             </p>
           </div>
@@ -79,7 +79,7 @@ export default function Etape5({ onSuivant }) {
         background: `${RED}11`, border: `1px solid ${RED}44`, borderRadius: 16,
         padding: '18px', marginBottom: 20,
       }}>
-        <p style={{ fontSize: 15, color: '#fff', fontWeight: 700, lineHeight: 1.6 }}>
+        <p style={{ fontSize: 15, color: '#111', fontWeight: 700, lineHeight: 1.6 }}>
           🎯 Comment s'appelle la <span style={{ color: '#60a5fa' }}>teinte bleue</span> de ces verres Transitions ?
         </p>
       </div>
@@ -95,10 +95,10 @@ export default function Etape5({ onSuivant }) {
           style={{
             width: '100%',
             padding: '16px',
-            background: '#111',
-            border: `2px solid ${erreur ? RED : '#333'}`,
+            background: '#fff',
+            border: `2px solid ${erreur ? RED : '#ddd'}`,
             borderRadius: 12,
-            color: '#fff',
+            color: '#111',
             fontSize: 18,
             fontWeight: 700,
             letterSpacing: 2,

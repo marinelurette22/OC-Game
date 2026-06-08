@@ -4,7 +4,7 @@ export default function Landing({ onStart }) {
   return (
     <div style={{
       minHeight: '100vh',
-      background: '#0a0a0a',
+      background: '#ffffff',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -22,7 +22,7 @@ export default function Landing({ onStart }) {
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           fontWeight: 900, fontSize: 20, color: '#fff', letterSpacing: 1,
         }}>OC</div>
-        <span style={{ fontWeight: 900, fontSize: 28, color: '#fff', letterSpacing: 3 }}>'NIGME</span>
+        <span style={{ fontWeight: 900, fontSize: 28, color: '#111', letterSpacing: 3 }}>'NIGME</span>
       </div>
 
       {/* Icône lunettes */}
@@ -30,7 +30,7 @@ export default function Landing({ onStart }) {
 
       {/* Accroche */}
       <div style={{
-        background: '#111',
+        background: '#f5f5f5',
         border: `2px solid ${RED}`,
         borderRadius: 16,
         padding: '28px 24px',
@@ -40,7 +40,7 @@ export default function Landing({ onStart }) {
         <p style={{ fontSize: 13, color: '#888', letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>
           Tu t'ennuies ?
         </p>
-        <h1 style={{ fontSize: 22, fontWeight: 900, color: '#fff', lineHeight: 1.3, marginBottom: 12 }}>
+        <h1 style={{ fontSize: 22, fontWeight: 900, color: '#111', lineHeight: 1.3, marginBottom: 12 }}>
           Amateur de défi ?
         </h1>
         <p style={{ fontSize: 16, color: '#ccc', lineHeight: 1.6, marginBottom: 20 }}>
@@ -52,7 +52,7 @@ export default function Landing({ onStart }) {
           background: `linear-gradient(to right, transparent, ${RED}, transparent)`,
           marginBottom: 20,
         }} />
-        <p style={{ fontSize: 14, color: '#aaa', lineHeight: 1.6 }}>
+        <p style={{ fontSize: 14, color: '#666', lineHeight: 1.6 }}>
           5 énigmes autour de l'optique t'attendent. Sauras-tu toutes les résoudre ?
         </p>
       </div>

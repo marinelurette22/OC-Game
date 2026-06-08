@@ -55,12 +55,12 @@ export default function Bravo() {
       }}>
         <div style={{ fontSize: 56, marginBottom: 12, lineHeight: 1 }}>🎉</div>
 
-        <h1 style={{ fontSize: 28, fontWeight: 900, color: '#fff', marginBottom: 6, letterSpacing: 2 }}>
+        <h1 style={{ fontSize: 28, fontWeight: 900, color: '#111', marginBottom: 6, letterSpacing: 2 }}>
           BRAVO !
         </h1>
         <div style={{ width: 50, height: 4, background: RED, borderRadius: 2, marginBottom: 16 }} />
 
-        <p style={{ fontSize: 15, color: '#ccc', lineHeight: 1.7, marginBottom: 28, maxWidth: 300 }}>
+        <p style={{ fontSize: 15, color: '#555', lineHeight: 1.7, marginBottom: 28, maxWidth: 300 }}>
           Tu as relevé le défi OC'nigme ! Tente ta chance pour remporter ton cadeau 🎁
         </p>
 
@@ -89,7 +89,7 @@ export default function Bravo() {
         {!aSpinné && (
           <button onClick={tourner} disabled={mustSpin} style={{
             padding: '16px 40px',
-            background: mustSpin ? '#333' : RED,
+            background: mustSpin ? '#ddd' : RED,
             color: '#fff',
             border: 'none',
             borderRadius: 12,
@@ -106,7 +106,7 @@ export default function Bravo() {
         {/* Résultat */}
         {cadeau && (
           <div style={{
-            background: '#111',
+            background: '#f5f5f5',
             border: `2px solid ${RED}`,
             borderRadius: 20,
             padding: '24px',
@@ -116,11 +116,11 @@ export default function Bravo() {
             <p style={{ fontSize: 13, color: RED, fontWeight: 700, letterSpacing: 2, marginBottom: 10, textTransform: 'uppercase' }}>
               🎁 Tu as gagné !
             </p>
-            <p style={{ fontSize: 24, fontWeight: 900, color: '#fff', marginBottom: 16 }}>
+            <p style={{ fontSize: 24, fontWeight: 900, color: '#111', marginBottom: 16 }}>
               {cadeau}
             </p>
             <div style={{
-              background: '#0a0a0a', borderRadius: 12, padding: '14px',
+              background: '#fff', borderRadius: 12, padding: '14px',
             }}>
               <p style={{ fontSize: 14, color: '#888', lineHeight: 1.6 }}>
                 Montre cet écran à ton opticien pour récupérer ton cadeau 😊

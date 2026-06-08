@@ -33,20 +33,20 @@ export default function Etape3({ onSuivant }) {
 
       {/* Mise en scène */}
       <div style={{
-        background: '#111', border: '1px solid #222', borderRadius: 16,
+        background: '#f5f5f5', border: '1px solid #e0e0e0', borderRadius: 16,
         padding: '20px', marginBottom: 24,
       }}>
         <p style={{ fontSize: 13, color: RED, fontWeight: 700, marginBottom: 8, letterSpacing: 1 }}>
           👤 FABIAN — Sa 2ème paire
         </p>
-        <p style={{ fontSize: 15, color: '#ddd', lineHeight: 1.7 }}>
+        <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
           Fabian est aussi sportif ! Il fait de la course à pied et veut pouvoir simultanément :
         </p>
       </div>
 
       {/* Liste des fonctionnalités */}
       <div style={{
-        background: '#111', border: `1px solid ${RED}33`, borderRadius: 16,
+        background: '#f5f5f5', border: `1px solid ${RED}44`, borderRadius: 16,
         padding: '20px', marginBottom: 24,
       }}>
         {[
@@ -58,15 +58,15 @@ export default function Etape3({ onSuivant }) {
           <div key={i} style={{
             display: 'flex', alignItems: 'center', gap: 12,
             padding: '10px 0',
-            borderBottom: i < 3 ? '1px solid #1e1e1e' : 'none',
+            borderBottom: i < 3 ? '1px solid #e0e0e0' : 'none',
           }}>
             <span style={{ fontSize: 22 }}>{item.emoji}</span>
-            <span style={{ fontSize: 15, color: '#ddd' }}>{item.text}</span>
+            <span style={{ fontSize: 15, color: '#333' }}>{item.text}</span>
           </div>
         ))}
 
-        <div style={{ marginTop: 16, padding: '12px', background: '#0a0a0a', borderRadius: 10 }}>
-          <p style={{ fontSize: 15, color: '#fff', fontWeight: 600, lineHeight: 1.6 }}>
+        <div style={{ marginTop: 16, padding: '12px', background: '#fff', borderRadius: 10 }}>
+          <p style={{ fontSize: 15, color: '#111', fontWeight: 600, lineHeight: 1.6 }}>
             Trouvez le nom de cette marque de <span style={{ color: RED }}>lunettes connectées</span> disponible dans notre magasin.
           </p>
         </div>
@@ -83,10 +83,10 @@ export default function Etape3({ onSuivant }) {
           style={{
             width: '100%',
             padding: '16px',
-            background: '#111',
-            border: `2px solid ${erreur ? RED : '#333'}`,
+            background: '#fff',
+            border: `2px solid ${erreur ? RED : '#ddd'}`,
             borderRadius: 12,
-            color: '#fff',
+            color: '#111',
             fontSize: 18,
             fontWeight: 700,
             letterSpacing: 2,

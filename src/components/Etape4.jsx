@@ -42,32 +42,32 @@ export default function Etape4({ onSuivant }) {
 
       {/* Titre */}
       <div style={{
-        background: '#111', border: `1px solid ${RED}33`, borderRadius: 16,
+        background: '#f5f5f5', border: `1px solid ${RED}44`, borderRadius: 16,
         padding: '20px', marginBottom: 20,
       }}>
         <p style={{ fontSize: 13, color: RED, fontWeight: 700, marginBottom: 6, letterSpacing: 1 }}>
           🕶️ RAY-BAN META — Fiche technique
         </p>
-        <p style={{ fontSize: 14, color: '#aaa', lineHeight: 1.6 }}>
+        <p style={{ fontSize: 14, color: '#666', lineHeight: 1.6 }}>
           Découvrez les caractéristiques de cette monture connectée révolutionnaire.
         </p>
       </div>
 
       {/* Specs */}
       <div style={{
-        background: '#111', border: '1px solid #1e1e1e', borderRadius: 16,
+        background: '#f5f5f5', border: '1px solid #e0e0e0', borderRadius: 16,
         overflow: 'hidden', marginBottom: 24,
       }}>
         {SPECS.map((s, i) => (
           <div key={i} style={{
             display: 'flex', gap: 14, padding: '14px 18px',
-            borderBottom: i < SPECS.length - 1 ? '1px solid #1e1e1e' : 'none',
+            borderBottom: i < SPECS.length - 1 ? '1px solid #e0e0e0' : 'none',
             alignItems: 'flex-start',
           }}>
             <span style={{ fontSize: 22, flexShrink: 0, marginTop: 2 }}>{s.emoji}</span>
             <div>
-              <div style={{ fontSize: 14, fontWeight: 700, color: '#fff', marginBottom: 2 }}>{s.titre}</div>
-              <div style={{ fontSize: 13, color: '#888' }}>{s.desc}</div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: '#111', marginBottom: 2 }}>{s.titre}</div>
+              <div style={{ fontSize: 13, color: '#666' }}>{s.desc}</div>
             </div>
           </div>
         ))}
@@ -78,7 +78,7 @@ export default function Etape4({ onSuivant }) {
         background: `${RED}11`, border: `1px solid ${RED}44`, borderRadius: 16,
         padding: '18px', marginBottom: 20,
       }}>
-        <p style={{ fontSize: 15, color: '#fff', fontWeight: 700, lineHeight: 1.6 }}>
+        <p style={{ fontSize: 15, color: '#111', fontWeight: 700, lineHeight: 1.6 }}>
           🎯 Que doit-on dire pour activer l'<span style={{ color: RED }}>IA</span> des Ray-Ban Meta ?
         </p>
       </div>
@@ -94,10 +94,10 @@ export default function Etape4({ onSuivant }) {
           style={{
             width: '100%',
             padding: '16px',
-            background: '#111',
-            border: `2px solid ${erreur ? RED : '#333'}`,
+            background: '#fff',
+            border: `2px solid ${erreur ? RED : '#ddd'}`,
             borderRadius: 12,
-            color: '#fff',
+            color: '#111',
             fontSize: 17,
             fontWeight: 700,
             outline: 'none',
