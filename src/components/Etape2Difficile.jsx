@@ -8,7 +8,7 @@ const INDICES = [
   { id: 2, indice: 'Marque britannique et son tartan iconique',               lettres: 8,  reponse: 'BURBERRY' },
   { id: 3, indice: 'Maison milanaise au triangle noir inversé',               lettres: 5,  reponse: 'PRADA' },
   { id: 4, indice: 'Créateurs des célèbres Wayfarer et Aviator',             lettres: 6,  reponse: 'RAYBAN' },
-  { id: 5, indice: 'Marque allemande au style corporate, son prénom est Hugo', lettres: 4,  reponse: 'BOSS' },
+  { id: 5, indice: "La marque de monture aux lignes élégantes et intemporelles pour un style business chic — son nom signifie 'patron' en anglais", lettres: 4,  reponse: 'BOSS' },
   { id: 6, indice: 'René en était le fondateur, champion de tennis et crocodile sont ses symboles', lettres: 7,  reponse: 'LACOSTE' },
 ]
 
