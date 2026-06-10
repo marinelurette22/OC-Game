@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Wheel } from 'react-custom-roulette'
 import Layout from './Layout'
+import { tracker } from '../firebase'
 
 const RED = '#C8102E'
 
@@ -44,7 +45,9 @@ export default function Bravo() {
   const onFinish = () => {
     setMustSpin(false)
     setASpinné(true)
-    setCadeau(CADEAUX[prizeIndex].option)
+    const cadeau = CADEAUX[prizeIndex].option
+    setCadeau(cadeau)
+    tracker('cadeau_' + cadeau.toLowerCase().replace(/[^a-z0-9]/g, '_'))
   }
 
   return (
