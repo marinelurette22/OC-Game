@@ -64,8 +64,8 @@ export default function App() {
       {ecran === 'landing'      && <Landing       onStart={() => setEcran('age')} />}
       {ecran === 'age'          && <AgeSelect     onFacile={() => setEcran('etape1')} onDifficile={() => setEcran('etape1d')} />}
       {ecran === 'coming-soon'  && <ComingSoon    onRetour={() => setEcran('age')} />}
-      {ecran === 'etape1d'      && <Etape1Difficile onSuivant={() => suivant('etape2d')} />}
-      {ecran === 'etape2d'      && <Etape2Difficile onSuivant={() => suivant('etape3d')} />}
+      {ecran === 'etape1d'      && <Etape2Difficile onSuivant={() => suivant('etape2d')} />}
+      {ecran === 'etape2d'      && <Etape1Difficile onSuivant={() => suivant('etape3d')} />}
       {ecran === 'etape3d'      && <Etape3Difficile onSuivant={() => suivant('etape4d')} />}
       {ecran === 'etape4d'      && <Etape4Difficile onSuivant={() => suivant('bravo')} />}
       {ecran === 'etape1'       && <Etape1        onSuivant={() => suivant('etape2')} />}

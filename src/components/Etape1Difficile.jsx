@@ -104,7 +104,7 @@ export default function Etape1Difficile({ onSuivant }) {
   }
 
   return (
-    <Layout etape={1}>
+    <Layout etape={2}>
       {/* Badge */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 24 }}>
         <div style={{
@@ -112,7 +112,7 @@ export default function Etape1Difficile({ onSuivant }) {
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           fontWeight: 900, fontSize: 16, color: '#fff',
         }}>1</div>
-        <span style={{ fontSize: 13, color: '#888', letterSpacing: 2, textTransform: 'uppercase' }}>Énigme 1 · Les marques OC</span>
+        <span style={{ fontSize: 13, color: '#888', letterSpacing: 2, textTransform: 'uppercase' }}>Énigme 2 · Les marques OC</span>
       </div>
 
       {/* Mise en scène */}
@@ -121,7 +121,7 @@ export default function Etape1Difficile({ onSuivant }) {
           MARINE — Responsable montures
         </p>
         <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
-          Marine connaît parfaitement les marques de son magasin. Et toi ?
+          Pour sa 2ème paire, Marine se tourne vers les marques propres d'Optical Center. Sauras-tu les retrouver ?
         </p>
       </div>
 
