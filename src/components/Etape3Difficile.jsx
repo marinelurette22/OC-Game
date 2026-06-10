@@ -81,7 +81,7 @@ export default function Etape3Difficile({ onSuivant }) {
           ANTHONY — Responsable atelier et verres
         </p>
         <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
-          Marine a trouvé sa monture. Il est maintenant temps de choisir les verres ! Anthony, expert en optique et responsable de l'atelier, travaille chaque jour avec les meilleures marques de verres du marché.
+          Marine a trouvé ses montures. Il est maintenant temps de choisir les verres ! Anthony, expert en optique et responsable de l'atelier, travaille chaque jour avec les meilleures marques de verres du marché.
         </p>
       </div>
 
