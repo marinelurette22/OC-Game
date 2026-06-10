@@ -61,12 +61,12 @@ export default function Bravo() {
         <p style={{ fontSize: 13, color: RED, fontWeight: 700, letterSpacing: 1, marginBottom: 8 }}>
           La team OC Neuvillette est fière de toi !
         </p>
-        <p style={{ fontSize: 15, color: '#555', lineHeight: 1.7, marginBottom: 28, maxWidth: 300 }}>
+        <p style={{ fontSize: 14, color: '#555', lineHeight: 1.6, marginBottom: 16, maxWidth: 300 }}>
           Tu as relevé le défi OC'nigme ! Tente ta chance pour remporter ton cadeau.
         </p>
 
         {/* Roue */}
-        <div style={{ marginBottom: 24 }}>
+        <div style={{ marginBottom: 16 }}>
           <Wheel
             mustStartSpinning={mustSpin}
             prizeNumber={prizeIndex}
@@ -82,7 +82,9 @@ export default function Bravo() {
             radiusLineWidth={2}
             fontSize={13}
             spinDuration={0.8}
+            perpendicularText={false}
             pointerProps={{ style: { filter: 'drop-shadow(0 0 4px #C8102E)' } }}
+            style={{ width: 280, height: 280 }}
           />
         </div>
 
