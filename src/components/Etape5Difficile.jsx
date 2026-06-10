@@ -86,8 +86,31 @@ export default function Etape5Difficile({ onSuivant }) {
         <span style={{ fontSize: 15, fontWeight: 800, color: RED }}>{nbValides} / {AFFIRMATIONS.length}</span>
       </div>
 
+      {/* Catégories — toujours visibles */}
+      <div style={{ display: 'flex', gap: 10, marginBottom: 20 }}>
+        {CATEGORIES.map(cat => (
+          <button
+            key={cat}
+            onClick={() => handleCategorie(cat)}
+            disabled={!selectionne}
+            style={{
+              flex: 1,
+              padding: '14px 8px',
+              background: selectionne ? RED : '#ddd',
+              color: selectionne ? '#fff' : '#aaa',
+              border: 'none', borderRadius: 12,
+              fontSize: 13, fontWeight: 800,
+              letterSpacing: 1, textTransform: 'uppercase',
+              transition: 'all 0.2s',
+            }}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
       {/* Affirmations */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 20 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
         {AFFIRMATIONS.map(a => {
           const estValide = valides[a.id]
           const estSelectionne = selectionne === a.id
@@ -126,40 +149,6 @@ export default function Etape5Difficile({ onSuivant }) {
           )
         })}
       </div>
-
-      {/* Catégories */}
-      {selectionne && (
-        <div>
-          <p style={{ fontSize: 13, color: '#888', marginBottom: 10, textAlign: 'center' }}>
-            Quel type de lentille ?
-          </p>
-          <div style={{ display: 'flex', gap: 10 }}>
-            {CATEGORIES.map(cat => (
-              <button
-                key={cat}
-                onClick={() => handleCategorie(cat)}
-                style={{
-                  flex: 1,
-                  padding: '14px 8px',
-                  background: RED, color: '#fff',
-                  border: 'none', borderRadius: 12,
-                  fontSize: 13, fontWeight: 800,
-                  letterSpacing: 1, textTransform: 'uppercase',
-                  transition: 'all 0.15s',
-                }}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {!selectionne && nbValides < AFFIRMATIONS.length && (
-        <p style={{ fontSize: 13, color: '#aaa', textAlign: 'center' }}>
-          Appuie sur une caractéristique pour commencer.
-        </p>
-      )}
     </Layout>
   )
 }
