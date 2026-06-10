@@ -52,11 +52,11 @@ export default function Etape6({ onSuivant }) {
         <p style={{ fontSize: 13, color: '#888', marginBottom: 12, letterSpacing: 2, textTransform: 'uppercase' }}>
           Mission 6
         </p>
-        <p style={{ fontSize: 15, color: '#111', fontWeight: 700, lineHeight: 1.7, marginBottom: 16 }}>
-          Prends le verre de démonstration <span style={{ color: RED }}>Transitions Saphir</span> et passe-le sous la lampe UV.
+        <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7, marginBottom: 16 }}>
+          Pour être sûr d'avoir la bonne couleur, prends le verre de démonstration <span style={{ color: RED, fontWeight: 700 }}>Transitions Saphir</span> et passe-le sous la lampe UV.
         </p>
         <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
-          Un code secret apparaît… Entre-le ci-dessous pour débloquer ta récompense !
+          Si c'est bien celui-là, un code apparaît dessus… Note-le et entre-le ci-dessous pour débloquer ta récompense !
         </p>
       </div>
 
