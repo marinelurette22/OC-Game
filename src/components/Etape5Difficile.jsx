@@ -65,7 +65,7 @@ export default function Etape5Difficile({ onSuivant }) {
           MARGAUX — Responsable contactologie
         </p>
         <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
-          Marine a ses montures et ses verres, mais elle fait du sport — les lunettes, c'est contraignant ! Margaux, responsable contactologie, lui conseille des lentilles. Encore faut-il choisir le bon type…
+          Maintenant que Marine est très bien équipée avec ses deux paires de lunettes, il lui reste un dernier défi : trouver des lentilles pour son sport. Margaux, notre responsable contactologie, est là pour l'aider. Mais quel type choisir ?
         </p>
       </div>
 
