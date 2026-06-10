@@ -4,18 +4,15 @@ import Layout from './Layout'
 const RED = '#C8102E'
 
 const INDICES = [
-  { id: 1,  indice: 'Maison italienne au double G',                          lettres: 5,  reponse: 'GUCCI' },
-  { id: 2,  indice: 'Marque britannique et son tartan iconique',              lettres: 8,  reponse: 'BURBERRY' },
-  { id: 3,  indice: 'Maison milanaise au triangle noir inversé',              lettres: 5,  reponse: 'PRADA' },
-  { id: 4,  indice: 'Marque française au style bohème chic',                  lettres: 5,  reponse: 'CHLOE' },
-  { id: 5,  indice: 'Fondée à Paris par un créateur emblématique des 60s',   lettres: 12, reponse: 'SAINTLAURENT' },
-  { id: 6,  indice: 'Marque américaine au triangle et point d\'interrogation',lettres: 5,  reponse: 'GUESS' },
-  { id: 7,  indice: 'Créateurs des célèbres Wayfarer et Aviator',            lettres: 6,  reponse: 'RAYBAN' },
-  { id: 8,  indice: 'Le duo de créateurs italiens D&G',                      lettres: 12, reponse: 'DOLCEGABBANA' },
-  { id: 9,  indice: 'Designer américain, ex-directeur artistique de Gucci',  lettres: 7,  reponse: 'TOMFORD' },
-  { id: 10, indice: 'Marque allemande au prénom Hugo',                        lettres: 4,  reponse: 'BOSS' },
-  { id: 11, indice: 'Marque française au crocodile',                          lettres: 7,  reponse: 'LACOSTE' },
-  { id: 12, indice: 'Marque née sur la Côte d\'Azur',                        lettres: 10, reponse: 'FACONNABLE' },
+  { id: 1, indice: 'Maison italienne au double G',                           lettres: 5,  reponse: 'GUCCI' },
+  { id: 2, indice: 'Marque britannique et son tartan iconique',               lettres: 8,  reponse: 'BURBERRY' },
+  { id: 3, indice: 'Maison milanaise au triangle noir inversé',               lettres: 5,  reponse: 'PRADA' },
+  { id: 4, indice: 'Marque française au style bohème chic',                   lettres: 5,  reponse: 'CHLOE' },
+  { id: 5, indice: 'Fondée à Paris par un créateur emblématique des 60s',    lettres: 12, reponse: 'SAINTLAURENT' },
+  { id: 6, indice: 'Marque américaine au triangle et point d\'interrogation', lettres: 5,  reponse: 'GUESS' },
+  { id: 7, indice: 'Créateurs des célèbres Wayfarer et Aviator',             lettres: 6,  reponse: 'RAYBAN' },
+  { id: 8, indice: 'Marque allemande au prénom Hugo',                         lettres: 4,  reponse: 'BOSS' },
+  { id: 9, indice: 'Marque française au crocodile',                           lettres: 7,  reponse: 'LACOSTE' },
 ]
 
 function normaliser(str) {
@@ -75,7 +72,7 @@ export default function Etape2Difficile({ onSuivant }) {
       <div style={{ background: '#f5f5f5', border: `1px solid ${RED}44`, borderRadius: 16, padding: '20px', marginBottom: 20 }}>
         <p style={{ fontSize: 13, color: '#888', marginBottom: 8, letterSpacing: 2, textTransform: 'uppercase' }}>Mission 2</p>
         <p style={{ fontSize: 15, color: '#111', fontWeight: 700, lineHeight: 1.6 }}>
-          Retrouve les <span style={{ color: RED }}>12 marques de luxe</span> de notre magasin grâce aux indices.
+          Retrouve les <span style={{ color: RED }}>9 marques de luxe</span> de notre magasin grâce aux indices.
         </p>
         <p style={{ fontSize: 13, color: '#888', marginTop: 8 }}>
           Pour les marques composées, écris sans espace. Ex : RAY-BAN → RAYBAN
