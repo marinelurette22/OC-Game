@@ -58,6 +58,9 @@ export default function Bravo() {
         </h1>
         <div style={{ width: 50, height: 4, background: RED, borderRadius: 2, marginBottom: 16 }} />
 
+        <p style={{ fontSize: 13, color: RED, fontWeight: 700, letterSpacing: 1, marginBottom: 8 }}>
+          La team OC Neuvillette est fière de toi !
+        </p>
         <p style={{ fontSize: 15, color: '#555', lineHeight: 1.7, marginBottom: 28, maxWidth: 300 }}>
           Tu as relevé le défi OC'nigme ! Tente ta chance pour remporter ton cadeau.
         </p>
