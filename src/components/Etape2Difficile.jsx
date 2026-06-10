@@ -7,10 +7,10 @@ const INDICES = [
   { id: 1, indice: 'Maison italienne au double G',                           lettres: 5,  reponse: 'GUCCI' },
   { id: 2, indice: 'Marque britannique et son tartan iconique',               lettres: 8,  reponse: 'BURBERRY' },
   { id: 3, indice: 'Maison milanaise au triangle noir inversé',               lettres: 5,  reponse: 'PRADA' },
-  { id: 4, indice: 'Fondée à Paris par un créateur emblématique des 60s',    lettres: 12, reponse: 'SAINTLAURENT' },
+  { id: 4, indice: 'Maison de couture parisienne fondée par Yves, icône de la mode française', lettres: 12, reponse: 'SAINTLAURENT' },
   { id: 5, indice: 'Créateurs des célèbres Wayfarer et Aviator',             lettres: 6,  reponse: 'RAYBAN' },
-  { id: 6, indice: 'Montures épurées pour les looks urbains et professionnels — son prénom est Hugo', lettres: 4,  reponse: 'BOSS' },
-  { id: 7, indice: 'Marque française au crocodile, sponsor de Roland-Garros', lettres: 7,  reponse: 'LACOSTE' },
+  { id: 6, indice: 'Marque allemande au style corporate, son prénom est Hugo', lettres: 4,  reponse: 'BOSS' },
+  { id: 7, indice: 'René en était le fondateur, champion de tennis et crocodile sont ses symboles', lettres: 7,  reponse: 'LACOSTE' },
 ]
 
 function normaliser(str) {
