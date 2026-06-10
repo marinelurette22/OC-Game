@@ -12,7 +12,7 @@ const INDICES = [
   { id: 6, indice: 'Marque américaine au triangle et point d\'interrogation', lettres: 5,  reponse: 'GUESS' },
   { id: 7, indice: 'Créateurs des célèbres Wayfarer et Aviator',             lettres: 6,  reponse: 'RAYBAN' },
   { id: 8, indice: 'Montures épurées pour les looks urbains et professionnels — son prénom est Hugo', lettres: 4,  reponse: 'BOSS' },
-  { id: 9, indice: 'Marque française au crocodile',                           lettres: 7,  reponse: 'LACOSTE' },
+  { id: 9, indice: 'Marque française au crocodile, sponsor de Roland-Garros', lettres: 7,  reponse: 'LACOSTE' },
 ]
 
 function normaliser(str) {
