@@ -3,7 +3,8 @@ const RED = '#C8102E'
 export default function AgeSelect({ onFacile, onDifficile }) {
   return (
     <div style={{
-      minHeight: '100vh',
+      height: '100vh',
+      overflow: 'hidden',
       background: '#ffffff',
       display: 'flex',
       flexDirection: 'column',
