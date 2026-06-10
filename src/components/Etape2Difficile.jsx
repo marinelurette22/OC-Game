@@ -8,10 +8,9 @@ const INDICES = [
   { id: 2, indice: 'Marque britannique et son tartan iconique',               lettres: 8,  reponse: 'BURBERRY' },
   { id: 3, indice: 'Maison milanaise au triangle noir inversé',               lettres: 5,  reponse: 'PRADA' },
   { id: 4, indice: 'Fondée à Paris par un créateur emblématique des 60s',    lettres: 12, reponse: 'SAINTLAURENT' },
-  { id: 5, indice: 'Marque américaine au triangle et point d\'interrogation', lettres: 5,  reponse: 'GUESS' },
-  { id: 6, indice: 'Créateurs des célèbres Wayfarer et Aviator',             lettres: 6,  reponse: 'RAYBAN' },
-  { id: 7, indice: 'Montures épurées pour les looks urbains et professionnels — son prénom est Hugo', lettres: 4,  reponse: 'BOSS' },
-  { id: 8, indice: 'Marque française au crocodile, sponsor de Roland-Garros', lettres: 7,  reponse: 'LACOSTE' },
+  { id: 5, indice: 'Créateurs des célèbres Wayfarer et Aviator',             lettres: 6,  reponse: 'RAYBAN' },
+  { id: 6, indice: 'Montures épurées pour les looks urbains et professionnels — son prénom est Hugo', lettres: 4,  reponse: 'BOSS' },
+  { id: 7, indice: 'Marque française au crocodile, sponsor de Roland-Garros', lettres: 7,  reponse: 'LACOSTE' },
 ]
 
 function normaliser(str) {
@@ -71,7 +70,7 @@ export default function Etape2Difficile({ onSuivant }) {
       <div style={{ background: '#f5f5f5', border: `1px solid ${RED}44`, borderRadius: 16, padding: '20px', marginBottom: 20 }}>
         <p style={{ fontSize: 13, color: '#888', marginBottom: 8, letterSpacing: 2, textTransform: 'uppercase' }}>Mission 2</p>
         <p style={{ fontSize: 15, color: '#111', fontWeight: 700, lineHeight: 1.6 }}>
-          Retrouve les <span style={{ color: RED }}>8 marques de luxe</span> de notre magasin grâce aux indices.
+          Retrouve les <span style={{ color: RED }}>7 marques de luxe</span> de notre magasin grâce aux indices.
         </p>
         <p style={{ fontSize: 13, color: '#888', marginTop: 8 }}>
           Pour les marques composées, écris sans espace. Ex : RAY-BAN → RAYBAN
