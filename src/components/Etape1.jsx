@@ -40,7 +40,7 @@ export default function Etape1({ onSuivant, onRetour }) {
           👤 FABIAN — Responsable optique
         </p>
         <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
-          Fabian souhaite changer ses 2 paires de lunettes. Il cherche une monture légère, confortable et dans l'air du temps. Il a besoin de votre aide pour les choisir !
+          Fabian souhaite changer ses 2 paires de lunettes. Il cherche une monture légère, confortable et dans l'air du temps. Il a besoin de ton aide pour les choisir !
         </p>
       </div>
 
@@ -59,7 +59,7 @@ export default function Etape1({ onSuivant, onRetour }) {
           Elle a une particularité : c'est un <span style={{ color: RED, fontWeight: 700 }}>palindrome</span> — elle se lit pareil dans les deux sens.
         </p>
         <p style={{ fontSize: 15, color: '#555', lineHeight: 1.7, marginTop: 12 }}>
-          À votre avis, quel est son nom ?
+          À ton avis, quel est son nom ?
         </p>
       </div>
 
@@ -70,7 +70,7 @@ export default function Etape1({ onSuivant, onRetour }) {
           value={reponse}
           onChange={e => { setReponse(e.target.value); setErreur(false) }}
           onKeyDown={e => e.key === 'Enter' && valider()}
-          placeholder="Votre réponse…"
+          placeholder="Ta réponse…"
           style={{
             width: '100%',
             padding: '16px',
@@ -88,7 +88,7 @@ export default function Etape1({ onSuivant, onRetour }) {
         />
         {erreur && (
           <p style={{ color: RED, fontSize: 13, marginTop: 8, fontWeight: 600 }}>
-            Ce n'est pas ça… Cherchez encore !
+            Ce n'est pas ça… Cherche encore !
           </p>
         )}
       </div>

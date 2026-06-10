@@ -59,7 +59,7 @@ export default function Etape2({ onSuivant }) {
           🔍 Mission 2
         </p>
         <p style={{ fontSize: 16, color: '#111', lineHeight: 1.7, fontWeight: 600 }}>
-          Pour soulager ses yeux au quotidien, quel traitement de verres lui conseillez-vous ?
+          Pour soulager ses yeux au quotidien, quel traitement de verres lui conseilles-tu ?
         </p>
       </div>
 
