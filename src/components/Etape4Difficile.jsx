@@ -101,15 +101,15 @@ export default function Etape4Difficile({ onSuivant }) {
 
           return (
             <div key={q.id} style={{
-              background: estValide ? `${RED}11` : '#f5f5f5',
-              border: `1px solid ${estValide ? RED : '#e0e0e0'}`,
+              background: estValide ? '#f0f0f0' : '#f5f5f5',
+              border: `1px solid ${estValide ? '#111' : '#e0e0e0'}`,
               borderRadius: 16, padding: '18px',
               transition: 'all 0.2s',
             }}>
               <div style={{ display: 'flex', gap: 10, marginBottom: 14 }}>
                 <span style={{
                   minWidth: 24, height: 24,
-                  background: estValide ? RED : '#ddd',
+                  background: estValide ? '#111' : '#ddd',
                   color: estValide ? '#fff' : '#888',
                   borderRadius: 6,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -149,7 +149,7 @@ export default function Etape4Difficile({ onSuivant }) {
 
               {estValide && (
                 <div style={{ marginTop: 4 }}>
-                  <p style={{ fontSize: 13, color: RED, fontWeight: 700, marginBottom: 6 }}>
+                  <p style={{ fontSize: 13, color: '#111', fontWeight: 700, marginBottom: 6 }}>
                     ✓ {q.reponse ? 'VRAI' : 'FAUX'}
                   </p>
                   <p style={{ fontSize: 13, color: '#555', lineHeight: 1.5, margin: 0 }}>
