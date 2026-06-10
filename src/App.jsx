@@ -11,6 +11,7 @@ import Etape6 from './components/Etape6'
 import Bravo from './components/Bravo'
 import Etape1Difficile from './components/Etape1Difficile'
 import Etape2Difficile from './components/Etape2Difficile'
+import Etape3Difficile from './components/Etape3Difficile'
 
 const RED = '#C8102E'
 
@@ -64,7 +65,7 @@ export default function App() {
       {ecran === 'coming-soon'  && <ComingSoon    onRetour={() => setEcran('age')} />}
       {ecran === 'etape1d'      && <Etape1Difficile onSuivant={() => suivant('etape2d')} />}
       {ecran === 'etape2d'      && <Etape2Difficile onSuivant={() => suivant('etape3d')} />}
-
+      {ecran === 'etape3d'      && <Etape3Difficile onSuivant={() => suivant('etape4d')} />}
       {ecran === 'etape1'       && <Etape1        onSuivant={() => suivant('etape2')} />}
       {ecran === 'etape2'       && <Etape2        onSuivant={() => suivant('etape3')} />}
       {ecran === 'etape3'       && <Etape3        onSuivant={() => suivant('etape4')} />}
