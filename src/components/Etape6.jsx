@@ -53,10 +53,10 @@ export default function Etape6({ onSuivant }) {
           Mission 6
         </p>
         <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7, marginBottom: 16 }}>
-          Pour être sûr d'avoir la bonne couleur, prends le verre de démonstration <span style={{ color: RED, fontWeight: 700 }}>Transitions Saphir</span> et passe-le sous la lampe UV.
+          Prends le verre de démonstration <span style={{ color: RED, fontWeight: 700 }}>Transitions Saphir</span> et passe-le sous la lampe UV pour vérifier que c'est bien la bonne couleur.
         </p>
         <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
-          Si c'est bien celui-là, un code apparaît dessus… Note-le et entre-le ci-dessous pour débloquer ta récompense !
+          Un code est gravé sur le verre — tu peux le voir même quand le verre est blanc. Entre-le ci-dessous pour débloquer ta récompense !
         </p>
       </div>
 
