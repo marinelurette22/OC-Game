@@ -78,10 +78,10 @@ export default function Etape3Difficile({ onSuivant }) {
       {/* Mise en scène */}
       <div style={{ background: '#f5f5f5', border: '1px solid #e0e0e0', borderRadius: 16, padding: '20px', marginBottom: 24 }}>
         <p style={{ fontSize: 13, color: RED, fontWeight: 700, marginBottom: 8, letterSpacing: 1 }}>
-          MARINE — Responsable montures
+          ANTHONY — Responsable atelier et verres
         </p>
         <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
-          Marine travaille chaque jour avec les meilleures marques de verres du marché. Montre que tu les connais aussi bien qu'elle !
+          Marine a trouvé sa monture. Il est maintenant temps de choisir les verres ! Anthony, expert en optique et responsable de l'atelier, travaille chaque jour avec les meilleures marques de verres du marché.
         </p>
       </div>
 
@@ -89,7 +89,7 @@ export default function Etape3Difficile({ onSuivant }) {
       <div style={{ background: '#f5f5f5', border: `1px solid ${RED}44`, borderRadius: 16, padding: '20px', marginBottom: 20 }}>
         <p style={{ fontSize: 13, color: '#888', marginBottom: 8, letterSpacing: 2, textTransform: 'uppercase' }}>Mission 3</p>
         <p style={{ fontSize: 15, color: '#111', fontWeight: 700, lineHeight: 1.6 }}>
-          Réponds correctement aux <span style={{ color: RED }}>4 questions</span> sur les marques de verres du magasin.
+          Réponds correctement aux <span style={{ color: RED }}>4 questions</span> sur les marques de verres qu'Anthony recommande.
         </p>
       </div>
 

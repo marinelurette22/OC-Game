@@ -72,10 +72,10 @@ export default function Etape4Difficile({ onSuivant }) {
       {/* Mise en scène */}
       <div style={{ background: '#f5f5f5', border: '1px solid #e0e0e0', borderRadius: 16, padding: '20px', marginBottom: 24 }}>
         <p style={{ fontSize: 13, color: RED, fontWeight: 700, marginBottom: 8, letterSpacing: 1 }}>
-          MARINE — Responsable montures
+          ANTHONY — Responsable atelier et verres
         </p>
         <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
-          Dernière épreuve ! Marine veut s'assurer que tu maîtrises les traitements de verres. Vrai ou faux ?
+          Les verres sont choisis ! Anthony propose maintenant les meilleurs traitements pour accompagner les verres de Marine. Sauras-tu les reconnaître ?
         </p>
       </div>
 
@@ -83,7 +83,7 @@ export default function Etape4Difficile({ onSuivant }) {
       <div style={{ background: '#f5f5f5', border: `1px solid ${RED}44`, borderRadius: 16, padding: '20px', marginBottom: 20 }}>
         <p style={{ fontSize: 13, color: '#888', marginBottom: 8, letterSpacing: 2, textTransform: 'uppercase' }}>Mission 4</p>
         <p style={{ fontSize: 15, color: '#111', fontWeight: 700, lineHeight: 1.6 }}>
-          Réponds <span style={{ color: RED }}>Vrai ou Faux</span> à chaque affirmation sur les traitements de verres.
+          Réponds <span style={{ color: RED }}>Vrai ou Faux</span> à chaque affirmation sur les traitements qu'Anthony recommande.
         </p>
       </div>
 
