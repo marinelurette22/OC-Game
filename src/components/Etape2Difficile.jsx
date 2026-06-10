@@ -25,6 +25,15 @@ export default function Etape2Difficile({ onSuivant }) {
   const handleChange = (id, val) => {
     setReponses(prev => ({ ...prev, [id]: val }))
     if (erreurs[id]) setErreurs(prev => ({ ...prev, [id]: false }))
+    // Validation automatique
+    const indice = INDICES.find(i => i.id === id)
+    if (normaliser(val) === indice.reponse) {
+      const nouveauxValides = { ...valides, [id]: true }
+      setValides(nouveauxValides)
+      if (Object.keys(nouveauxValides).length === INDICES.length) {
+        setTimeout(onSuivant, 800)
+      }
+    }
   }
 
   const handleValider = (id) => {
