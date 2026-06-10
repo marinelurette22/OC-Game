@@ -14,6 +14,7 @@ import Etape2Difficile from './components/Etape2Difficile'
 import Etape3Difficile from './components/Etape3Difficile'
 import Etape4Difficile from './components/Etape4Difficile'
 import Etape5Difficile from './components/Etape5Difficile'
+import Etape6Difficile from './components/Etape6Difficile'
 
 const RED = '#C8102E'
 
@@ -69,7 +70,8 @@ export default function App() {
       {ecran === 'etape2d'      && <Etape1Difficile onSuivant={() => suivant('etape3d')} />}
       {ecran === 'etape3d'      && <Etape3Difficile onSuivant={() => suivant('etape4d')} />}
       {ecran === 'etape4d'      && <Etape4Difficile onSuivant={() => suivant('etape5d')} />}
-      {ecran === 'etape5d'      && <Etape5Difficile onSuivant={() => suivant('bravo')} />}
+      {ecran === 'etape5d'      && <Etape5Difficile onSuivant={() => suivant('etape6d')} />}
+      {ecran === 'etape6d'      && <Etape6Difficile onSuivant={() => suivant('bravo')} />}
       {ecran === 'etape1'       && <Etape1        onSuivant={() => suivant('etape2')} />}
       {ecran === 'etape2'       && <Etape2        onSuivant={() => suivant('etape3')} />}
       {ecran === 'etape3'       && <Etape3        onSuivant={() => suivant('etape4')} />}
