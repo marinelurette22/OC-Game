@@ -6,9 +6,9 @@ const RED = '#C8102E'
 const QUESTIONS = [
   {
     id: 1,
-    question: "Le traitement antireflet réduit les reflets sur les verres et améliore le confort visuel devant les écrans.",
+    question: "Le traitement antireflet réduit les reflets sur les verres et améliore le confort visuel.",
     reponse: true,
-    explication: "Le traitement antireflet élimine les reflets parasites et réduit la fatigue visuelle, particulièrement devant les écrans.",
+    explication: "Le traitement antireflet élimine les reflets parasites et réduit la fatigue visuelle.",
   },
   {
     id: 2,
