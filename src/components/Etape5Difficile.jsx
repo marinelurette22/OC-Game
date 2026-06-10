@@ -6,12 +6,12 @@ const RED = '#C8102E'
 const CATEGORIES = ['Journalière', 'Mensuelle', 'Bimensuelle']
 
 const AFFIRMATIONS = [
-  { id: 1, texte: 'Se jettent après chaque utilisation',                      bonne: 'Journalière' },
-  { id: 2, texte: 'Idéales pour le sport et les voyages',                     bonne: 'Journalière' },
-  { id: 3, texte: 'À nettoyer et conserver chaque soir, durée de vie 30 jours', bonne: 'Mensuelle' },
-  { id: 4, texte: 'Plus économiques sur le long terme',                        bonne: 'Mensuelle' },
-  { id: 5, texte: 'Se remplacent toutes les 2 semaines',                       bonne: 'Bimensuelle' },
-  { id: 6, texte: 'Bon compromis entre confort et budget',                     bonne: 'Bimensuelle' },
+  { id: 1, texte: 'Se jettent après chaque utilisation',                        bonne: 'Journalière' },
+  { id: 2, texte: 'À nettoyer et conserver chaque soir, durée de vie 30 jours', bonne: 'Mensuelle' },
+  { id: 3, texte: 'Se remplacent toutes les 2 semaines',                        bonne: 'Bimensuelle' },
+  { id: 4, texte: 'Plus économiques sur le long terme',                         bonne: 'Mensuelle' },
+  { id: 5, texte: 'Idéales pour le sport et les voyages',                       bonne: 'Journalière' },
+  { id: 6, texte: 'Bon compromis entre confort et budget',                      bonne: 'Bimensuelle' },
 ]
 
 export default function Etape5Difficile({ onSuivant }) {
