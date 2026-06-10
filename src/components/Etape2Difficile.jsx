@@ -98,8 +98,8 @@ export default function Etape2Difficile({ onSuivant, onRetour }) {
           const estErreur = erreurs[id]
           return (
             <div key={id} style={{
-              background: estValide ? `${RED}11` : '#f5f5f5',
-              border: `1px solid ${estValide ? RED : '#e0e0e0'}`,
+              background: estValide ? '#f0f0f0' : '#f5f5f5',
+              border: `1px solid ${estValide ? '#111' : '#e0e0e0'}`,
               borderRadius: 12,
               padding: '14px',
               transition: 'all 0.2s',
@@ -107,7 +107,7 @@ export default function Etape2Difficile({ onSuivant, onRetour }) {
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10, marginBottom: estValide ? 0 : 10 }}>
                 <span style={{
                   minWidth: 24, height: 24,
-                  background: estValide ? RED : '#ddd',
+                  background: estValide ? '#111' : '#ddd',
                   color: estValide ? '#fff' : '#888',
                   borderRadius: 6,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -118,7 +118,7 @@ export default function Etape2Difficile({ onSuivant, onRetour }) {
                   <p style={{ fontSize: 11, color: '#aaa', margin: '2px 0 0 0' }}>{lettres} lettres</p>
                 </div>
                 {estValide && (
-                  <span style={{ fontSize: 13, fontWeight: 800, color: RED, letterSpacing: 1 }}>
+                  <span style={{ fontSize: 13, fontWeight: 800, color: '#111', letterSpacing: 1 }}>
                     {reponse}
                   </span>
                 )}
