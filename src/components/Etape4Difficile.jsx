@@ -12,9 +12,9 @@ const QUESTIONS = [
   },
   {
     id: 2,
-    question: "Un verre polarisé est recommandé pour une utilisation en intérieur devant un écran.",
+    question: "Le traitement polarisant, réservé aux verres solaires, est recommandé pour une utilisation en intérieur devant un écran.",
     reponse: false,
-    explication: "Le verre polarisé est conçu pour l'extérieur : il élimine les reflets du soleil sur l'eau, la route et la neige.",
+    explication: "Le traitement polarisant se monte sur les verres solaires. Il est conçu pour l'extérieur : il élimine les reflets du soleil sur l'eau, la route et la neige.",
   },
   {
     id: 3,
