@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 
 const RED = '#C8102E'
 
-export default function Layout({ children, etape = null, total = 6 }) {
+export default function Layout({ children, etape = null, total = 6, onRetour = null }) {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [etape])
@@ -30,8 +30,14 @@ export default function Layout({ children, etape = null, total = 6 }) {
         alignItems: 'center',
         justifyContent: 'space-between',
       }}>
-        {/* Logo OC */}
+        {/* Logo OC ou bouton retour */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          {onRetour && (
+            <button onClick={onRetour} style={{
+              background: 'none', border: 'none', cursor: 'pointer',
+              fontSize: 13, color: '#888', fontWeight: 700, padding: '4px 8px 4px 0',
+            }}>← Retour</button>
+          )}
           <img src="/logo-oc.png" alt="Optical Center" style={{ height: 36, width: 'auto' }} />
           <span style={{ fontWeight: 800, fontSize: 16, color: '#111', letterSpacing: 2 }}>'NIGME</span>
         </div>

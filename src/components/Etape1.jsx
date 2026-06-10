@@ -4,7 +4,7 @@ import Layout from './Layout'
 const RED = '#C8102E'
 const BONNE_REPONSE = 'LEVEL'
 
-export default function Etape1({ onSuivant }) {
+export default function Etape1({ onSuivant, onRetour }) {
   const [reponse, setReponse] = useState('')
   const [erreur, setErreur] = useState(false)
   const [shake, setShake] = useState(false)
@@ -20,7 +20,7 @@ export default function Etape1({ onSuivant }) {
   }
 
   return (
-    <Layout etape={1}>
+    <Layout etape={1} onRetour={onRetour}>
       {/* Badge étape */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 24 }}>
         <div style={{

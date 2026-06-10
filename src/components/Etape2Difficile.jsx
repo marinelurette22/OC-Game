@@ -16,7 +16,7 @@ function normaliser(str) {
   return str.trim().toUpperCase().replace(/[\s\-']/g, '')
 }
 
-export default function Etape2Difficile({ onSuivant }) {
+export default function Etape2Difficile({ onSuivant, onRetour }) {
   const [reponses, setReponses] = useState({})
   const [valides, setValides] = useState({})
   const [erreurs, setErreurs] = useState({})
@@ -53,7 +53,7 @@ export default function Etape2Difficile({ onSuivant }) {
   const nbValides = Object.keys(valides).length
 
   return (
-    <Layout etape={1}>
+    <Layout etape={1} onRetour={onRetour}>
       {/* Badge */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 24 }}>
         <div style={{

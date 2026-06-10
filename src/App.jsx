@@ -66,13 +66,13 @@ export default function App() {
       {ecran === 'landing'      && <Landing       onStart={() => setEcran('age')} />}
       {ecran === 'age'          && <AgeSelect     onFacile={() => setEcran('etape1')} onDifficile={() => setEcran('etape1d')} />}
       {ecran === 'coming-soon'  && <ComingSoon    onRetour={() => setEcran('age')} />}
-      {ecran === 'etape1d'      && <Etape2Difficile onSuivant={() => suivant('etape2d')} />}
+      {ecran === 'etape1d'      && <Etape2Difficile onSuivant={() => suivant('etape2d')} onRetour={() => setEcran('age')} />}
       {ecran === 'etape2d'      && <Etape1Difficile onSuivant={() => suivant('etape3d')} />}
       {ecran === 'etape3d'      && <Etape3Difficile onSuivant={() => suivant('etape4d')} />}
       {ecran === 'etape4d'      && <Etape4Difficile onSuivant={() => suivant('etape5d')} />}
       {ecran === 'etape5d'      && <Etape5Difficile onSuivant={() => suivant('etape6d')} />}
       {ecran === 'etape6d'      && <Etape6Difficile onSuivant={() => suivant('bravo')} />}
-      {ecran === 'etape1'       && <Etape1        onSuivant={() => suivant('etape2')} />}
+      {ecran === 'etape1'       && <Etape1        onSuivant={() => suivant('etape2')} onRetour={() => setEcran('age')} />}
       {ecran === 'etape2'       && <Etape2        onSuivant={() => suivant('etape3')} />}
       {ecran === 'etape3'       && <Etape3        onSuivant={() => suivant('etape4')} />}
       {ecran === 'etape4'       && <Etape4        onSuivant={() => suivant('etape5')} />}
