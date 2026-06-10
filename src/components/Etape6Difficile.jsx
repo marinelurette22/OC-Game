@@ -40,7 +40,7 @@ export default function Etape6Difficile({ onSuivant }) {
           LUCAS — Audioprothésiste
         </p>
         <p style={{ fontSize: 15, color: '#333', lineHeight: 1.7 }}>
-          Lucas, notre audioprothésiste, tient à te rappeler que l'audition ça se surveille aussi ! La perte auditive peut toucher tout le monde, à tout âge.
+          Marine est maintenant équipée de A à Z ! Mais Lucas, notre audioprothésiste, a une dernière question pour toi avant de récupérer ta récompense…
         </p>
       </div>
 
