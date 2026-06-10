@@ -31,7 +31,7 @@ function FlashSuccess({ onDone }) {
     >
       <div style={{ fontSize: 72, color: RED, marginBottom: 20, fontWeight: 900 }}>✓</div>
       <p style={{ fontSize: 28, fontWeight: 900, color: RED, letterSpacing: 3, textTransform: 'uppercase' }}>
-        Bonne réponse !
+        Bonnes réponses !
       </p>
       <style>{`
         @keyframes flashIn {
