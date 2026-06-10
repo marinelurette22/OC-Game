@@ -1,6 +1,19 @@
+import { useEffect, useState } from 'react'
+import { getFirestore, doc, onSnapshot } from 'firebase/firestore'
+
 const RED = '#C8102E'
 
 export default function Landing({ onStart }) {
+  const [nbJoueurs, setNbJoueurs] = useState(null)
+
+  useEffect(() => {
+    const db = getFirestore()
+    const unsub = onSnapshot(doc(db, 'stats', 'global'), snap => {
+      if (snap.exists()) setNbJoueurs(snap.data().bravo_atteint || 0)
+    })
+    return unsub
+  }, [])
+
   return (
     <div style={{
       height: '100vh',
@@ -45,6 +58,13 @@ export default function Landing({ onStart }) {
         <p style={{ fontSize: 14, color: '#666', lineHeight: 1.6, marginBottom: 16 }}>
           Résous-les toutes et tente de remporter un cadeau !
         </p>
+        {nbJoueurs > 0 && (
+          <p style={{ fontSize: 13, color: '#888', lineHeight: 1.5, marginBottom: 12 }}>
+            Prêt à relever le défi comme{' '}
+            <span style={{ color: RED, fontWeight: 800 }}>{nbJoueurs}</span>
+            {' '}personne{nbJoueurs > 1 ? 's' : ''} l'ont fait avant toi ?
+          </p>
+        )}
         <p style={{ fontSize: 13, color: '#888', letterSpacing: 2, textTransform: 'uppercase' }}>
           Prêt pour le défi ?
         </p>
