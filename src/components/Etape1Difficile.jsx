@@ -159,8 +159,9 @@ export default function Etape1Difficile({ onSuivant }) {
       <div style={{
         background: '#f5f5f5', border: '1px solid #e0e0e0', borderRadius: 16,
         padding: '16px', marginBottom: 12, overflowX: 'auto',
+        display: 'flex', justifyContent: 'center',
       }}>
-        <div style={{ display: 'inline-grid', gridTemplateColumns: 'repeat(12, 28px)', gap: 2 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 28px)', gap: 2 }}>
           {GRID.map((row, r) =>
             row.map((lettre, c) => (
               <div key={`${r}-${c}`} onClick={() => handleCell(r, c)} style={getCellStyle(r, c)}>
