@@ -45,21 +45,30 @@ export default function Etape3Difficile({ onSuivant }) {
     if (erreurs[qid]) setErreurs(prev => ({ ...prev, [qid]: false }))
   }
 
-  const handleValider = (qid) => {
-    const q = QUESTIONS.find(q => q.id === qid)
-    if (!selections[qid]) return
-    if (selections[qid] === q.reponse) {
-      const nouveauxValides = { ...valides, [qid]: true }
-      setValides(nouveauxValides)
-      if (Object.keys(nouveauxValides).length === QUESTIONS.length) {
-        setTimeout(onSuivant, 800)
+  const handleValiderTout = () => {
+    const nouveauxValides = { ...valides }
+    const nouveauxErreurs = {}
+
+    QUESTIONS.forEach(q => {
+      if (valides[q.id]) return
+      if (selections[q.id] === q.reponse) {
+        nouveauxValides[q.id] = true
+      } else {
+        nouveauxErreurs[q.id] = true
       }
-    } else {
-      setErreurs(prev => ({ ...prev, [qid]: true }))
-      setTimeout(() => setErreurs(prev => ({ ...prev, [qid]: false })), 1200)
+    })
+
+    setValides(nouveauxValides)
+    setErreurs(nouveauxErreurs)
+
+    if (Object.keys(nouveauxErreurs).length > 0) {
+      setTimeout(() => setErreurs({}), 1500)
+    } else if (Object.keys(nouveauxValides).length === QUESTIONS.length) {
+      setTimeout(onSuivant, 600)
     }
   }
 
+  const toutSelectionne = QUESTIONS.every(q => valides[q.id] || selections[q.id])
   const nbValides = Object.keys(valides).length
   let derniereMarque = null
 
@@ -100,7 +109,7 @@ export default function Etape3Difficile({ onSuivant }) {
       </div>
 
       {/* Questions */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 20, marginBottom: 24 }}>
         {QUESTIONS.map(q => {
           const afficherSeparateur = derniereMarque !== q.marque
           derniereMarque = q.marque
@@ -116,16 +125,16 @@ export default function Etape3Difficile({ onSuivant }) {
                 </p>
               )}
               <div style={{
-                background: estValide ? '#f0f0f0' : '#f5f5f5',
-                border: `1px solid ${estValide ? '#111' : '#e0e0e0'}`,
+                background: estValide ? '#f0f0f0' : estErreur ? '#fff5f5' : '#f5f5f5',
+                border: `1px solid ${estValide ? '#111' : estErreur ? RED : '#e0e0e0'}`,
                 borderRadius: 16, padding: '18px',
                 transition: 'all 0.2s',
               }}>
                 <div style={{ display: 'flex', gap: 10, marginBottom: 14 }}>
                   <span style={{
                     minWidth: 24, height: 24,
-                    background: estValide ? '#111' : '#ddd',
-                    color: estValide ? '#fff' : '#888',
+                    background: estValide ? '#111' : estErreur ? RED : '#ddd',
+                    color: estValide || estErreur ? '#fff' : '#888',
                     borderRadius: 6,
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     fontSize: 12, fontWeight: 800, flexShrink: 0,
@@ -135,7 +144,7 @@ export default function Etape3Difficile({ onSuivant }) {
 
                 {!estValide && (
                   <>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, marginBottom: 10 }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
                       {q.choix.map(c => (
                         <button
                           key={c}
@@ -154,14 +163,6 @@ export default function Etape3Difficile({ onSuivant }) {
                         >{c}</button>
                       ))}
                     </div>
-                    <button onClick={() => handleValider(q.id)} disabled={!selection} style={{
-                      width: '100%', padding: '12px',
-                      background: selection ? RED : '#ddd',
-                      color: selection ? '#fff' : '#999',
-                      border: 'none', borderRadius: 10,
-                      fontSize: 14, fontWeight: 800, letterSpacing: 1, textTransform: 'uppercase',
-                      transition: 'all 0.2s',
-                    }}>Valider →</button>
                     {estErreur && (
                       <p style={{ color: RED, fontSize: 12, marginTop: 8, fontWeight: 600, textAlign: 'center' }}>
                         Ce n'est pas ça… Réfléchis encore !
@@ -180,6 +181,22 @@ export default function Etape3Difficile({ onSuivant }) {
           )
         })}
       </div>
+
+      {/* Bouton unique */}
+      <button
+        onClick={handleValiderTout}
+        disabled={!toutSelectionne}
+        style={{
+          width: '100%', padding: '16px',
+          background: toutSelectionne ? RED : '#ddd',
+          color: toutSelectionne ? '#fff' : '#999',
+          border: 'none', borderRadius: 12,
+          fontSize: 16, fontWeight: 800, letterSpacing: 1, textTransform: 'uppercase',
+          transition: 'all 0.2s',
+        }}
+      >
+        Valider les 4 réponses →
+      </button>
     </Layout>
   )
 }
