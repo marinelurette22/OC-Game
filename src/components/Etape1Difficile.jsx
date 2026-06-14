@@ -142,18 +142,22 @@ export default function Etape1Difficile({ onSuivant }) {
         <span style={{ fontSize: 15, fontWeight: 800, color: RED }}>{trouves.length} / {MOTS.length}</span>
       </div>
 
-      {/* Mots trouvés */}
-      {trouves.length > 0 && (
-        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 12 }}>
-          {trouves.map(mot => (
+      {/* Liste des mots à trouver */}
+      <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 12 }}>
+        {MOTS.map(({ mot }) => {
+          const estTrouve = trouves.includes(mot)
+          return (
             <span key={mot} style={{
               padding: '4px 12px',
-              background: RED, color: '#fff',
+              background: estTrouve ? RED : '#f0f0f0',
+              color: estTrouve ? '#fff' : '#aaa',
               borderRadius: 20, fontSize: 12, fontWeight: 700, letterSpacing: 1,
+              textDecoration: estTrouve ? 'line-through' : 'none',
+              transition: 'all 0.2s',
             }}>{mot}</span>
-          ))}
-        </div>
-      )}
+          )
+        })}
+      </div>
 
       {/* Grille */}
       <div style={{
