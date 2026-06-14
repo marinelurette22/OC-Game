@@ -61,9 +61,7 @@ export default function Etape3Difficile({ onSuivant }) {
     setValides(nouveauxValides)
     setErreurs(nouveauxErreurs)
 
-    if (Object.keys(nouveauxErreurs).length > 0) {
-      setTimeout(() => setErreurs({}), 1500)
-    } else if (Object.keys(nouveauxValides).length === QUESTIONS.length) {
+    if (Object.keys(nouveauxErreurs).length === 0 && Object.keys(nouveauxValides).length === QUESTIONS.length) {
       setTimeout(onSuivant, 600)
     }
   }
