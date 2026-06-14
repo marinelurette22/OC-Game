@@ -19,7 +19,7 @@ import { tracker } from './firebase'
 
 const RED = '#C8102E'
 
-function FlashSuccess({ onDone }) {
+function FlashSuccess({ onDone, pluriel }) {
   return (
     <div
       style={{
@@ -34,7 +34,7 @@ function FlashSuccess({ onDone }) {
     >
       <div style={{ fontSize: 72, color: RED, marginBottom: 20, fontWeight: 900 }}>✓</div>
       <p style={{ fontSize: 28, fontWeight: 900, color: RED, letterSpacing: 3, textTransform: 'uppercase' }}>
-        Bonnes réponses !
+        {pluriel ? 'Bonnes réponses !' : 'Bonne réponse !'}
       </p>
       <style>{`
         @keyframes flashIn {
@@ -50,6 +50,7 @@ export default function App() {
   const [ecran, setEcran] = useState('landing')
   const [flash, setFlash] = useState(false)
   const [prochain, setProchain] = useState(null)
+  const [modeDifficile, setModeDifficile] = useState(false)
 
   const suivant = (ecranSuivant) => {
     setProchain(ecranSuivant)
@@ -64,11 +65,13 @@ export default function App() {
 
   const demarrerFacile = () => {
     tracker('facile_demarré')
+    setModeDifficile(false)
     setEcran('etape1')
   }
 
   const demarrerDifficile = () => {
     tracker('difficile_demarré')
+    setModeDifficile(true)
     setEcran('etape1d')
   }
 
@@ -79,7 +82,7 @@ export default function App() {
 
   return (
     <div style={{ minHeight: '100vh', background: '#ffffff', display: 'flex', flexDirection: 'column' }}>
-      {flash && <FlashSuccess onDone={apresFlash} />}
+      {flash && <FlashSuccess onDone={apresFlash} pluriel={modeDifficile} />}
       {ecran === 'landing'      && <Landing       onStart={() => setEcran('age')} />}
       {ecran === 'age'          && <AgeSelect     onFacile={demarrerFacile} onDifficile={demarrerDifficile} />}
       {ecran === 'coming-soon'  && <ComingSoon    onRetour={() => setEcran('age')} />}
